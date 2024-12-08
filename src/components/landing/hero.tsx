@@ -11,7 +11,7 @@ export default function Hero() {
   const t = useTranslations("LandingPage");
 
   return (
-    <section className="relative mx-auto h-screen w-full bg-[url('@/public/assets/herobg.png')]">
+    <section className="relative mx-auto h-screen w-full bg-[url('/assets/herobg.png')]">
       <div
         className={cn(
           "absolute inset-0 top-[120px] mx-auto flex max-w-7xl flex-row items-start gap-5",
