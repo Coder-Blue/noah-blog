@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "@/i18n/config";
 import {
   About,
@@ -12,7 +13,6 @@ import {
   Works,
 } from "@/components/landing";
 import "./styles.css";
-import { getTranslations, setRequestLocale } from "next-intl/server";
 
 type LandingPageProps = {
   params: Promise<{ locale: Locale }>;
