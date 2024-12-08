@@ -1,0 +1,105 @@
+{
+  "Metadata": {
+    "defaultTitle": "Noah's Personal Blog",
+    "description": "A personal blog and portfolio built with NextJS by Noah Trần",
+    "ogImgUrl": "https://i.ibb.co/SmHPc04/og-en.png",
+    "ogDescription": "A place that Noah can freely share about his personal life."
+  },
+  "LandingPage": {
+    "metadataTitle": "Home",
+    "languageToggle": "Language",
+    "navbar": {
+      "about": "About",
+      "work": "Work",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "hero": {
+      "title": "Hi, I'm <span>Noah Trần</span>",
+      "description": "I design web interfaces, 3D visuals,<br></br> and develop web infrastructure, web application."
+    },
+    "about": {
+      "web": "Web Developer",
+      "app": "Application Developer",
+      "backend": "Backend Developer",
+      "teacher": "Teacher",
+      "title": "Introduction",
+      "headtext": "Overview.",
+      "paragraph": "I'm a skilled software engineer with experience in TypeScript, JavaScript, Python, and Rust. And expertise in web framework like NextJS, React, and Svelte. I'm a fast learner collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!"
+    },
+    "experience": {
+      "title": "My Work Experience",
+      "job1": {
+        "name": "Lam Sơn Secondary School, Đà Lạt",
+        "pos": "Python AI Researcher",
+        "duration": "2019 - 2021",
+        "title": "I used to be enthusiastic about machine learning. And to me, Python was one of the best programming language for to do some research with AI. My machine learning-based (Tensorflow, Anaconda, OpenCV, etc.) product at the school helped me getting a local reward in 2022."
+      },
+      "job2": {
+        "name": "Freelance",
+        "pos": "Junior Software Engineer",
+        "duration": "2020 - Current",
+        "title": "I'm in love with how web infrastructure works. Diving into the magical world of JavaScript, and more to build amazing products for the everyone. Most of my work are open-source, and can be access via <a>GitHub</a>, you can check it out."
+      },
+      "job3": {
+        "name": "Freelance",
+        "pos": "Local PC Techinician",
+        "duration": "2022 - Current",
+        "title": "Aside from software developing, I'm passionate for computer hardware. Building a PC like building a Lego kit, watching it works with joy. I work at home as PC technician to fix, diagnose, and build computers for entertainment."
+      }
+    },
+    "works": {
+      "title": "My Work",
+      "overview": "Projects.",
+      "description": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+      "project1": {
+        "description": "A web application that enables users to think, write, plan, and share. Working as your lightning-fast note app, unlike classic other note apps, it use Google Gemini AI to capture the thoughts, and assist your idea."
+      },
+      "project2": {
+        "description": "An advanced web social media platform that allows users to have free-speech, which is not limited by the unsettled caching system. Deliver your thoughts to the public as fast as the speed of light."
+      },
+      "project3": {
+        "description": "A web-based cloud storage platform that allows users to keep their data, files safe. It's possible, all thanks to the incredibly fast, and bleeding-edge database technology."
+      }
+    },
+    "testimonials": {
+      "title": "What others say",
+      "description": "Testimonials.",
+      "designation": "User",
+      "of": "of",
+      "name": "Anonymous",
+      "testimonial1": "Natri SOC brings a completely different experience than Facebook and X. It feels smoother to use without having to compromise too much.",
+      "testimonial2": "Argon Note may seem like a simple note-taking app at first glance, but thanks to its AI features, I can handle many work tasks more effectively.",
+      "testimonial3": "A cloud storage application of the time, so fast that I didn't think it would be possible, and I have to thank a lot for helping me quite a lot in my work."
+    },
+    "contact": {
+      "title": "Get in touch",
+      "description": "Contact.",
+      "inputName": {
+        "label": "Your Name",
+        "placeholder": "What's your name?"
+      },
+      "inputEmail": {
+        "label": "Your email",
+        "placeholder": "What's your web address?"
+      },
+      "inputMessage": {
+        "label": "Your Message",
+        "placeholder": "What do you want to say?"
+      },
+      "loadingMessage": {
+        "loading": "Sending...",
+        "notLoading": "Send"
+      },
+      "alertMessage": {
+        "success": "Thank you. I will get back to you as soon as possible.",
+        "failed": "Ahh, something went wrong. Please try again."
+      }
+    },
+    "footer": {
+      "terms": "Terms & Conditions",
+      "policy": "Privacy Policy",
+      "right": "All rights reserved"
+    }
+  }
+}

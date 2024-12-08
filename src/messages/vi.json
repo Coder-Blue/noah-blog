@@ -1,0 +1,105 @@
+{
+  "Metadata": {
+    "defaultTitle": "Blog cá nhân của Quân",
+    "description": "Một trang porfolio kiêm blog cá nhân được làm với NextJS bởi Anh Quân.",
+    "ogImgUrl": "https://i.ibb.co/QYGVpKq/og-vi.png",
+    "ogDescription": "Một nơi mà Quân có thể chia sẻ bản thân một cách tự do."
+  },
+  "LandingPage": {
+    "metadataTitle": "Trang chủ",
+    "languageToggle": "Ngôn ngữ",
+    "navbar": {
+      "about": "Về tôi",
+      "work": "Dự án",
+      "contact": "Liên hệ",
+      "blog": "Bài viết"
+    },
+    "hero": {
+      "title": "Xin chào, tôi là <span>Anh Quân</span>",
+      "description": "Tôi thiết kế giao diện web, thị giác 3D,<br></br> và phát triển cơ sở hạ tầng web, ứng dụng web."
+    },
+    "about": {
+      "web": "Nhà phát triển web",
+      "app": "Nhà phát triển phần mềm",
+      "backend": "Nhà phát triển Backend",
+      "teacher": "Giáo viên",
+      "title": "Giới thiệu",
+      "headtext": "Sơ lược.",
+      "paragraph": "Tôi là một kỹ sư phần mềm lành nghề có kinh nghiệm về TypeScript, JavaScript, Python và Rust. Và chuyên môn về các web framework như NextJS, React và Svelte. Tôi là người học nhanh, cộng tác chặt chẽ với khách hàng để tạo ra các giải pháp hiệu quả, có thể mở rộng và thân thiện với người dùng nhằm giải quyết các vấn đề thực tế. Hãy cùng nhau hợp tác để biến ý tưởng của bạn thành hiện thực!"
+    },
+    "experience": {
+      "title": "Kinh nghiệm làm việc của tôi",
+      "job1": {
+        "name": "Trường THCS Lam Sơn, Đà Lạt",
+        "pos": "Nghiên cứu sinh lĩnh vực AI",
+        "duration": "2019 - 2021",
+        "title": "Tôi đã từng hứng thú với lĩnh vực học máy. Và với tôi, Python là một trong những ngôn ngữ lập trình tốt nhất để thực hiện một số nghiên cứu với AI. Tôi đã từng tạo ra một sản phẩm dựa trên máy học (Tensorflow, Anaconda, OpenCV, v.v.) tại trường, đã giúp tôi nhận được một phần thưởng địa phương vào năm 2022."
+      },
+      "job2": {
+        "name": "Freelance",
+        "pos": "Kĩ sư phần mềm nghiệp dư",
+        "duration": "2020 - Nay",
+        "title": "Tôi yêu thích cách hoạt động của cơ sở hạ tầng web. Đi sâu vào thế giới kỳ diệu của JavaScript và hơn thế nữa để tạo ra những sản phẩm tuyệt vời cho mọi người. Hầu hết công việc của tôi đều là mã nguồn mở và có thể truy cập thông qua <a>GitHub</a>, bạn có thể xem qua."
+      },
+      "job3": {
+        "name": "Freelance",
+        "pos": "Nhân viên kỹ thuật tại địa phương",
+        "duration": "2022 - Nay",
+        "title": "Ngoài việc phát triển phần mềm, tôi còn đam mê phần cứng máy tính. Lắp ráp một chiếc PC giống như lắp ráp một bộ Lego, xem cách nó hoạt động là một niềm vui với tôi. Tôi làm việc tại nhà với tư cách là kỹ thuật viên PC, sửa chữa, chẩn đoán và xây dựng máy tính cho vui."
+      }
+    },
+    "works": {
+      "title": "Công việc của tôi",
+      "overview": "Các dự án.",
+      "description": "Các dự án sau đây thể hiện kỹ năng và kinh nghiệm của tôi thông qua các ví dụ thực tế về công việc của tôi. Mỗi dự án được mô tả ngắn gọn với các liên kết đến GitHub repo và các bản demo trực tiếp trong đó. Nó phản ánh khả năng của tôi trong việc giải quyết các vấn đề phức tạp, làm việc với các công nghệ khác nhau và quản lý dự án một cách hiệu quả.",
+      "project1": {
+        "description": "Một ứng dụng web cho phép người dùng suy nghĩ, viết, lập kế hoạch và chia sẻ. Hoạt động như một ứng dụng ghi chú nhanh như chớp, không giống như các ứng dụng ghi chú cổ điển khác, nó sử dụng Google Gemini AI để ghi lại suy nghĩ và hỗ trợ ý tưởng của bạn."
+      },
+      "project2": {
+        "description": "Một nền tảng mạng xã hội web tiên tiến cho phép người dùng có quyền tự do ngôn luận, và điều này không bị giới hạn bởi hệ thống bộ nhớ đệm chưa ổn định. Truyền tải suy nghĩ của bạn tới mọi người mọi nơi nhanh như tốc độ ánh sáng."
+      },
+      "project3": {
+        "description": "Một nền tảng lưu trữ đám mây dựa trên web cho phép người dùng giữ an toàn cho dữ liệu, tệp của mình. Điều đó khả thi, tất cả là nhờ vào công nghệ cơ sở dữ liệu tiên tiến và cực kỳ nhanh."
+      }
+    },
+    "testimonials": {
+      "title": "Người khác nói gì",
+      "description": "Những lời chứng thực.",
+      "designation": "Người dùng",
+      "of": "của",
+      "name": "Ẩn danh",
+      "testimonial1": "Natri SOC mang lại một trải nghiệm khác hoàn toàn so với Facebook và X. Cảm giác được sử dụng mượt hơn mà không phải đánh đổi quá nhiều thứ.",
+      "testimonial2": "Argon Note tuy thoạt nhìn là một ứng dụng ghi note đơn giản, nhưng nhờ tính năng AI của nó, tôi đã có thể xử lý được nhiều tác vụ công việc một cách hiệu quả hơn.",
+      "testimonial3": "Một ứng dụng lưu trữ đám mây của thời đại, nhanh đến mức tôi đã từng không nghĩ là nó sẽ khả thi, và tôi phải cảm ơn rất nhiều vì đã giúp tôi khá nhiều trong công việc."
+    },
+    "contact": {
+      "title": "Liên lạc với tôi",
+      "description": "Liên hệ.",
+      "inputName": {
+        "label": "Tên của bạn",
+        "placeholder": "Tên bạn là gì?"
+      },
+      "inputEmail": {
+        "label": "Email của bạn",
+        "placeholder": "Địa chỉ Email của bạn là gì?"
+      },
+      "inputMessage": {
+        "label": "Lời nhắn của bạn",
+        "placeholder": "Bạn muốn gửi gắm điều gì?"
+      },
+      "loadingMessage": {
+        "loading": "Đang gửi...",
+        "notLoading": "Gửi"
+      },
+      "alertMessage": {
+        "success": "Cảm ơn bạn nhiều. Sẽ sớm hồi đáp bạn sớm nhất có thể.",
+        "failed": "Ahh, có gì đó không ổn. Hãy thử lại sau."
+      }
+    },
+    "footer": {
+      "terms": "Các điều khoản & điều kiện",
+      "policy": "Chính sách riêng tư",
+      "right": "Mọi quyền đã được bảo lưu"
+    }
+  }
+}

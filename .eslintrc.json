@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "prettier",
+    "standard",
+    "plugin:tailwindcss/recommended"
+  ],
+  "rules": {
+    "no-undef": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "next/link",
+        "message": "Please using @/i18n/routing instead.",
+        "importNames": ["default"]
+      },
+      {
+        "name": "next/navigation",
+        "message": "Please using @/i18n/routing instead.",
+        "importNames": [
+          "redirect",
+          "permanentRedirect",
+          "useRouter",
+          "usePathname"
+        ]
+      }
+    ]
+  }
+}

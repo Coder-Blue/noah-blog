@@ -1,0 +1,54 @@
+import type { Metadata } from "next";
+import { Locale } from "@/i18n/config";
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Footer,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+} from "@/components/landing";
+import "./styles.css";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
+type LandingPageProps = {
+  params: Promise<{ locale: Locale }>;
+};
+
+export async function generateMetadata({
+  params,
+}: LandingPageProps): Promise<Metadata> {
+  const locale = (await params).locale;
+  const t = await getTranslations({ locale, namespace: "LandingPage" });
+
+  return {
+    title: t("metadataTitle"),
+  };
+}
+
+async function LandingPage({ params }: LandingPageProps) {
+  const locale = (await params).locale;
+
+  setRequestLocale(locale);
+
+  return (
+    <div className="relative z-0 bg-primary">
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+        <Navbar locale={locale} />
+        <Hero />
+      </div>
+      <About />
+      <Experience />
+      <Tech />
+      <Works />
+      <Feedbacks />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
+
+export default LandingPage;
