@@ -59,7 +59,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: locale,
-      url: "https://noah-tran-pblog.vercel.app/",
+      url: "https://noah-pblog.vercel.app/",
       title: t("defaultTitle"),
       description: t("ogDescription"),
       siteName: t("defaultTitle"),
