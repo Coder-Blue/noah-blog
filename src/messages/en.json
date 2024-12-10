@@ -3,7 +3,8 @@
     "defaultTitle": "Noah's Personal Blog",
     "description": "A personal blog and portfolio built with NextJS by Noah Trần",
     "ogImgUrl": "https://i.ibb.co/SmHPc04/og-en.png",
-    "ogDescription": "A place that Noah can freely share about his personal life."
+    "ogDescription": "A place that Noah can freely share about his personal life.",
+    "ogLocale": "en_CA"
   },
   "LandingPage": {
     "metadataTitle": "Home",

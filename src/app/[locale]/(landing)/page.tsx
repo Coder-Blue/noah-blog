@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "@/i18n/config";
+import { routing } from "@/i18n/routing";
 import {
   About,
   Contact,
@@ -17,6 +18,10 @@ import "./styles.css";
 type LandingPageProps = {
   params: Promise<{ locale: Locale }>;
 };
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
