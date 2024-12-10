@@ -7,12 +7,12 @@
   },
   "LandingPage": {
     "metadataTitle": "Trang chủ",
-    "languageToggle": "Ngôn ngữ",
     "navbar": {
       "about": "Về tôi",
       "work": "Dự án",
       "contact": "Liên hệ",
-      "blog": "Bài viết"
+      "blog": "Bài viết",
+      "languageToggle": "Ngôn ngữ"
     },
     "hero": {
       "title": "Xin chào, tôi là <span>Anh Quân</span>",

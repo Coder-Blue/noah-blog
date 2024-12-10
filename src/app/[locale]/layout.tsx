@@ -58,7 +58,8 @@ export async function generateMetadata({
     ],
     openGraph: {
       type: "website",
-      locale: locale,
+      locale: `${locale === "en" ? "en_CA" : "vi_VN"}`,
+      alternateLocale: ["en_CA", "vi_VN"],
       url: "https://noah-pblog.vercel.app/",
       title: t("defaultTitle"),
       description: t("ogDescription"),

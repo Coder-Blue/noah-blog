@@ -120,7 +120,7 @@ export default function Navbar({ locale }: NavbarProps) {
               ))}
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger className="text-[16px] font-medium hover:text-black-200">
-                  {t("languageToggle")}
+                  {t("navbar.languageToggle")}
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
                   <DropdownMenuSubContent className="mx-7 my-2 rounded-xl border-none bg-black-300 p-6">

@@ -7,12 +7,12 @@
   },
   "LandingPage": {
     "metadataTitle": "Home",
-    "languageToggle": "Language",
     "navbar": {
       "about": "About",
       "work": "Work",
       "contact": "Contact",
-      "blog": "Blog"
+      "blog": "Blog",
+      "languageToggle": "Language"
     },
     "hero": {
       "title": "Hi, I'm <span>Noah Trần</span>",
