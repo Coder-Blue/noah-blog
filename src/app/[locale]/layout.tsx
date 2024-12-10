@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
+import { Locale } from "@/i18n/config";
 import { routing } from "@/i18n/routing";
 import {
   getMessages,
@@ -104,7 +104,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale === "vn" ? "vi" : "en"} suppressHydrationWarning>
       <body className={quicksand.className}>
         <NextIntlClientProvider messages={messages}>
           {children}
