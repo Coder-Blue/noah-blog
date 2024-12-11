@@ -94,6 +94,7 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const locale = (await params).locale;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   if (!routing.locales.includes(locale as any)) {
     notFound();
@@ -104,7 +105,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale === "vn" ? "vi" : "en"} suppressHydrationWarning>
+    <html lang={t("lang")} suppressHydrationWarning>
       <body className={quicksand.className}>
         <NextIntlClientProvider messages={messages}>
           {children}
