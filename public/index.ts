@@ -17,7 +17,7 @@ import html from "./assets/tech/html.png";
 import javascript from "./assets/tech/javascript.png";
 import nextjs from "./assets/tech/nextjs.png";
 import prisma from "./assets/tech/prisma.png";
-import reactjs from "./assets/tech/reactjs.png";
+import reactjs from "./assets/tech/reactjs.svg";
 import svelte from "./assets/tech/svelte.png";
 import tailwind from "./assets/tech/tailwind.png";
 import tauri from "./assets/tech/tauri.png";
