@@ -26,6 +26,7 @@ export async function generateStaticParams() {
 
 async function SlugPostPage({ params }: SlugPostPageProps) {
   const slug = (await params).slug;
+  const locale = (await params).locale;
 
   let post = getBlogPosts().find((post) => post.slug === slug);
 
@@ -36,6 +37,7 @@ async function SlugPostPage({ params }: SlugPostPageProps) {
   return (
     <>
       <ReportViews
+        locale={locale}
         slug={post.slug}
         title={post.metadata.title}
         category={post.metadata.category}
