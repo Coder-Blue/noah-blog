@@ -5,6 +5,7 @@ import { Locale } from "@/i18n/config";
 import { useTranslations } from "next-intl";
 import useSWR from "swr";
 import { fetcher } from "@/lib/utils";
+import SkeletonCards from "@/components/blog/skeleton/posts-skeleton";
 import { Icons } from "@/components/icons";
 
 type PopularPostsProps = {
@@ -22,7 +23,7 @@ export default function PopularPosts({ locale }: PopularPostsProps) {
 
   if (error) return <div>{t("swrFetch.errorStatus")}</div>;
 
-  if (isLoading) return <div>{t("swrFetch.loadingStatus")}</div>;
+  if (isLoading) return <SkeletonCards />;
 
   return (
     <ul className="overflow-auto">

@@ -177,8 +177,7 @@
       }
     },
     "swrFetch": {
-      "errorStatus": "Failed to load",
-      "loadingStatus": "Loading..."
+      "errorStatus": "Failed to load"
     }
   },
   "NotFoundPage": {

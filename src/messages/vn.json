@@ -177,8 +177,7 @@
       }
     },
     "swrFetch": {
-      "errorStatus": "Không thể tải",
-      "loadingStatus": "Đang tải..."
+      "errorStatus": "Không thể tải"
     }
   },
   "NotFoundPage": {
