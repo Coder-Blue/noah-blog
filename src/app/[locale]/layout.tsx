@@ -60,7 +60,7 @@ export async function generateMetadata({
       type: "website",
       locale: t("ogLocale"),
       alternateLocale: ["en_CA", "vi_VN"],
-      url: "https://noah-pblog.vercel.app/",
+      url: process.env.NEXT_PUBLIC_URL,
       title: t("defaultTitle"),
       description: t("ogDescription"),
       siteName: t("defaultTitle"),
