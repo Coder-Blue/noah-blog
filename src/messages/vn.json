@@ -175,6 +175,10 @@
       "breadcrumb": {
         "title": "Trang chủ"
       }
+    },
+    "swrFetch": {
+      "errorStatus": "Không thể tải",
+      "loadingStatus": "Đang tải..."
     }
   },
   "NotFoundPage": {

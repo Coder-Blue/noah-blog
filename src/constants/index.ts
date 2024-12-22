@@ -79,19 +79,4 @@ const categories: { title: string; href: string }[] = [
   { title: "Tools", href: "tools" },
 ];
 
-const popularPosts: { title: string }[] = [
-  {
-    title: "Tại sao tôi lại chọn trường phái tư tưởng hư vô tích cực?",
-  },
-  {
-    title: "Giới thiệu JavaScript Framework, Svelte/SvelteKit với người Việt",
-  },
-  {
-    title: "React 19 released, what's now?",
-  },
-  {
-    title: "A bit more about me",
-  },
-];
-
-export { technologies, categories, popularPosts };
+export { technologies, categories };

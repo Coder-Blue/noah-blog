@@ -175,6 +175,10 @@
       "breadcrumb": {
         "title": "Home"
       }
+    },
+    "swrFetch": {
+      "errorStatus": "Failed to load",
+      "loadingStatus": "Loading..."
     }
   },
   "NotFoundPage": {
