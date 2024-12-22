@@ -1,0 +1,88 @@
+---
+title: "Giới thiệu JavaScript Framework, Svelte/SvelteKit với người Việt"
+publishedAt: "2024-12-16"
+summary: "Svelte, một Framework dễ sử dụng và được số đông các lập trình viên thế hệ mới yêu thích"
+category: "svelte"
+---
+
+Việt Nam, một thị trường đang giúp ngành công nghệ thông tin nóng lên không kém gì so với thế giới. Tuy sở hữu cho mình một thế mạnh to lớn như thế nhưng có vẻ các lập trình viên lại có phần ngại trước những công nghệ thế hệ mới của thế giới.
+
+Trong đó ví dụ tiêu biểu nhất thì ngoài PHP bản 5.7 (nó kết thúc quá trình hỗ trợ rồi, làm ơn cập nhật đi) sử dụng trong số đông các trang web Wordpress cũ trên mảnh đất hình chữ S ra thì số đông còn lại thì là React, một thư viện UI được viết bằng JavaScript của Meta.
+
+React rất tuyệt, không gì có thể bàn cãi khi nó đã thống trị bảng xếp hạng các thư viện/framework nổi tiếng từ lúc nó ra đời năm 2015 đến nay. Nó được bảo trì liên tục bởi Meta và có một cộng đồng nhiệt huyết ủng hộ và giúp đõ. Cá nhân tác giả cũng phải thừa nhận là đã sử dụng React cho 90% sản phẩm/dự án cá nhân lẫn đi làm thực tế.
+
+Nhưng đôi lúc có những vấn đề dị không thể tả nổi xuất hiện chỉ khi bạn đã làm một lập trình viên frontend nói chung, React nói riêng đủ lâu, như cách render hoặc quản lý bộ nhớ kỳ quặc, không tiện dụng của nó, có khi còn đập ngược lại lập trình viên.
+
+Thì tôi, tác giả bài viết muốn giới thiệu cho các bạn đọc một JavaScript framework sinh sau đẻ muộn hơn React, ít nổi tiếng hơn nhưng được yêu quý thứ nhì theo như cuộc khảo sát các lập trình viên của StackOverflow năm 2023.
+
+Ý muốn của tôi ở đây không hề muốn đả động gì đến tư tưởng của các bạn lập trình web hay ăn gạch đá chỉ trích, mà là chỉ muốn khuyến khích thị trường sôi động hơn, lập trình viên có nhiều lựa chọn hơn, đỡ vất vả hơn, hoặc chỉ đờn giản là có thứ để nghịch.
+
+![SveltePost](https://i.ibb.co/X4mq836/svelte.png)
+
+## Svelte là gì?
+
+Svelte là một thư viện UI JavaScript đơn giản được tạo ra bởi Rich Harris, hiện có thể sử dụng mặc định với Vite, một build tool tốc độ và hiệu năng cao. Thậm chí nếu bạn muốn một meta-framework như NextJS với React thì Svelte có SvelteKit.
+
+Svelte khác với React hay Vue đó là cách viết độc đáo, ngắn gọn của nó nhưng lại cho ra kết quả tốt ngang ngửa thậm chí có nhiều trường hợp tốt hơn. Nhưng thứ ma thuật nào góp phần vào thành công này? Đó là **Svelte Compiler**, một bộ biên dịch tối ưu.
+
+Svelte Compiler mạnh mẽ ở chỗ cái cách mà tác giả đã chọn đúng định hướng phát triển cho nó. Trình duyệt của bạn, một client, sẽ phải mất hàng tá thời gian để load rất nhiều khối HTML, JavaScript, và CSS. Trong đó JavaScript đã chiếm tỉ trọng nặng nhất.
+
+Và để giảm khối lượng JavaScript đến với trình duyệt của bạn, thứ tăng thời gian tải trang, cũng là thứ tỉ lệ thuận với số tiền của lập trình viên bốc hơi, Svelte Compiler đã bóp nghẹt, tối ưu lại JavaScript rồi gửi nó đến trình duyệt của bạn (tính năng này đang được React Compiler - một tính năng thử nghiệm của React học hỏi - sẽ tung ra sắp tới). Dù vẫn giữ được khả năng phản ứng, quản lý trạng thái đủ tốt như React.
+
+Với cách viết và sức mạnh như trên thì Svelte cực kì hợp với các lập trình viên ngành khoa học máy tính mới ra trường, vốn không có chuyên môn sâu về web, hoặc chưa thể chấp nhận với quá trình học React cao đến mức quá đáng, hoặc chỉ đơn giản là các nhà báo muốn viết một trang render nội dung nhanh, đơn giản mà không cần phải tốn nhiều công sức, phải học các khái niệm lập trình web cao siêu.
+
+Và Svelte Compiler năm 2024 như hổ mọc thêm cánh, khi bổ sung thêm `runes` vốn là phiên bản `Signals` của Svelte, giúp quản lý trạng thái hiệu quả gấp bội bản cũ.
+
+Đây là ví dụ thực tiễn về một app cộng 1 số mỗi khi người dùng ấn vào 1 nút tương tác:
+
+```svelte
+<script>
+  let count = $state(0);
+</script>
+
+<button on:click={() => count + 1}>
+  Số lần đã bấm: {count}
+</button>
+```
+
+So với của React:
+
+```js
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <button onClick={() => setCount((c) => c + 1)}>
+      Số lần đã bấm: {count}
+    </button>
+  );
+}
+```
+
+## Ưu điểm
+
+- Svelte không sử dụng DOM ảo
+
+- Svelte xuất bundle ra khá nhẹ, và tốc độ rerender cao
+
+- Dễ học nếu bạn đã có kiến thức cơ bản với HTML, JavaScript
+
+- Được cập nhật và bảo trì thường xuyên
+
+- Lập trình độc lập, tự do mà không phải phụ thuộc vào công ty lớn như Meta
+
+- Đã được một số công ty lớn sử dụng như Apple, The New York Times, etc.
+
+## Nhược điểm
+
+- Cộng đồng còn non trẻ, chưa có nhiều công cụ hỗ trợ từ bên thứ 3 hay sở hữu hệ sinh thái đủ lớn
+
+- AI không giúp bạn với code Svelte tốt bằng React được
+
+- Tài liệu học chi tiết hiện chỉ có mỗi trang web chính thức của Svelte, chưa có cộng đồng Việt hóa
+
+## Kết luận
+
+Svelte rất hứa hẹn cho một tương lai đầy cạnh tranh cho một thị trường web đang có dấu hiệu bước qua thời kỳ vàng. Cho các lập trình viên trải nghiệm những thứ mới mẻ sau khi đã quá đau đầu với React. Chỉ mong cộng đồng Svelte sẽ lớn mạnh hơn về sau này.

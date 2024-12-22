@@ -21,7 +21,13 @@ type FeedbackCardProps = {
 function Feedbacks() {
   const t = useTranslations("LandingPage");
 
-  const testimonials = [
+  const testimonials: {
+    testimonial: string;
+    name: string;
+    designation: string;
+    usingProduct: string;
+    image: StaticImageData | string;
+  }[] = [
     {
       testimonial: t("testimonials.testimonial1"),
       name: t("testimonials.name"),

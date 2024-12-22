@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { SectionWrapper } from "@/hoc";
 import HumanCanvas from "./canvas/human";
 import { lamson, pc, webdev } from "@/public/index";
@@ -11,7 +11,14 @@ function Experience() {
   const t = useTranslations("LandingPage");
   const [animationName, setAnimationName] = useState("idle");
 
-  const workExperiences = [
+  const workExperiences: {
+    name: string;
+    pos: string;
+    duration: string;
+    title: string | ReactNode;
+    icon: StaticImageData | string;
+    animation: string;
+  }[] = [
     {
       name: t("experience.job1.name"),
       pos: t("experience.job1.pos"),

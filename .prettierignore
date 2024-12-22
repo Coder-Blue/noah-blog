@@ -3,3 +3,6 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 bun.lockb
+
+# MDX files
+*.mdx

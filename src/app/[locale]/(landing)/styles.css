@@ -12,6 +12,20 @@
   display: block;
 }
 
+.title-span-gradient {
+  background: linear-gradient(
+    to right,
+    #5efce8,
+    #47d794,
+    #736efe,
+    #5efce8,
+    #47d794,
+    #736efe
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

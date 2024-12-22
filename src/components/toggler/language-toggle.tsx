@@ -5,13 +5,18 @@ import { Locale, locales, languageNames } from "@/i18n/config";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 
 type LanguageToggleProps = {
   locale: Locale;
+  className?: string;
 };
 
-export default function LanguageToggle({ locale }: LanguageToggleProps) {
+export default function LanguageToggle({
+  locale,
+  className,
+}: LanguageToggleProps) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -35,7 +40,7 @@ export default function LanguageToggle({ locale }: LanguageToggleProps) {
         <DropdownMenuItem
           key={lang}
           onClick={() => switchLanguage(lang)}
-          className="cursor-pointer text-[16px] font-medium text-white"
+          className={cn("cursor-pointer text-[16px] font-medium", className)}
         >
           {languageNames[lang]}
           {lang === locale && <CheckIcon className="ms-2 size-4" />}

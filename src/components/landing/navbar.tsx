@@ -10,6 +10,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuPortal,
+  DropdownMenuSeparator,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -31,7 +32,7 @@ export default function Navbar({ locale }: NavbarProps) {
 
   const t = useTranslations("LandingPage");
 
-  const navLinks = [
+  const navLinks: { id: string; title: string }[] = [
     {
       id: "#about",
       title: t("navbar.about"),
@@ -43,6 +44,10 @@ export default function Navbar({ locale }: NavbarProps) {
     {
       id: "#contact",
       title: t("navbar.contact"),
+    },
+    {
+      id: "blog",
+      title: t("navbar.blog"),
     },
   ];
 
@@ -93,8 +98,11 @@ export default function Navbar({ locale }: NavbarProps) {
                   <span className="sr-only">Toggle Langs</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="mx-4 my-2 min-w-[140px] rounded-xl border-none bg-black-300 p-6 text-white">
-                <LanguageToggle locale={locale} />
+              <DropdownMenuContent
+                align="end"
+                className="min-w-[140px] rounded-xl border-none bg-black-300 p-6 text-white"
+              >
+                <LanguageToggle locale={locale} className="text-white" />
               </DropdownMenuContent>
             </DropdownMenu>
           </li>
@@ -107,7 +115,10 @@ export default function Navbar({ locale }: NavbarProps) {
                 <span className="sr-only">NavMenu</span>
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="mx-4 my-2 min-w-[140px] rounded-xl border-none bg-black-300 p-6 text-white">
+            <DropdownMenuContent
+              align="end"
+              className="min-w-[140px] rounded-xl border-none bg-black-300 p-6 text-white"
+            >
               {navLinks.map((link) => (
                 <Link key={link.id} href={`/${link.id}`}>
                   <DropdownMenuItem
@@ -118,13 +129,14 @@ export default function Navbar({ locale }: NavbarProps) {
                   </DropdownMenuItem>
                 </Link>
               ))}
+              <DropdownMenuSeparator className="bg-black-500" />
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger className="text-[16px] font-medium hover:text-black-200">
                   {t("navbar.languageToggle")}
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
                   <DropdownMenuSubContent className="mx-7 my-2 rounded-xl border-none bg-black-300 p-6">
-                    <LanguageToggle locale={locale} />
+                    <LanguageToggle locale={locale} className="text-white" />
                   </DropdownMenuSubContent>
                 </DropdownMenuPortal>
               </DropdownMenuSub>

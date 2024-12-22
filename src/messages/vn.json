@@ -99,9 +99,87 @@
       }
     },
     "footer": {
-      "terms": "Các điều khoản & điều kiện",
+      "terms": "Điều khoản dịch vụ",
       "policy": "Chính sách riêng tư",
       "right": "Mọi quyền đã được bảo lưu"
     }
+  },
+  "BlogPage": {
+    "metadataTitle": "Bài viết",
+    "frontPage": {
+      "title": "Đăng tải gần đây",
+      "categories": {
+        "title": "CHUYÊN MỤC THỊNH HÀNH"
+      },
+      "posts": {
+        "title": "BÀI VIẾT NỔI BẬT"
+      },
+      "footer": {
+        "description": "Luôn cập nhật những tin tức và thông tin chi tiết mới nhất từ blog của chúng tôi.",
+        "mainLabel": "Bài viết",
+        "link": {
+          "label": "Liên Kết",
+          "contactLabel": "Liên lạc",
+          "terms": "Điều khoản dịch vụ",
+          "policy": "Chính sách riêng tư",
+          "sitemapLabel": "Sơ đồ Web"
+        },
+        "newletter": {
+          "title": "Bản tin",
+          "description": "Đăng ký nhận bản tin của chúng tôi để cập nhật những tin tức và cập nhật mới nhất.",
+          "emailInput": {
+            "placeholder": "Nhập email của bạn",
+            "submitButton": {
+              "loading": "Đang tải...",
+              "normal": "Đăng ký"
+            }
+          },
+          "right": "Mọi quyền đã được bảo lưu"
+        }
+      }
+    },
+    "mainNav": {
+      "title": "Bài Viết",
+      "themeToggler": {
+        "title": "Chế độ",
+        "light": "Sáng",
+        "dark": "Tối",
+        "system": "Hệ thống"
+      },
+      "about": "Về tôi",
+      "languageToggle": "Ngôn ngữ",
+      "life": {
+        "title": "Cuộc sống",
+        "description": "Cuộc sống của tôi diễn ra thế nào? Và một số lời khuyên hằng ngày."
+      },
+      "philosophy": {
+        "title": "Triết học",
+        "description": "Chia sẻ về góc nhìn thế giới quan của tôi."
+      },
+      "faq": {
+        "title": "Hỏi đáp",
+        "description": "Bạn hỏi qua email, tôi đáp bằng những bài blog."
+      },
+      "react": {
+        "description": "Cập nhật và chia sẻ những kỹ năng của tôi với thư viện UI React."
+      },
+      "svelte": {
+        "description": "Cập nhật và chia sẻ những kỹ năng của tôi với thư viện UI Svelte."
+      },
+      "tools": {
+        "title": "Công cụ",
+        "description": "Chia sẻ về những công cụ hằng ngày giúp tôi làm việc."
+      }
+    },
+    "postPage": {
+      "breadcrumb": {
+        "title": "Trang chủ"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "title": "<span>404</span> - Không Tìm Thấy Trang",
+    "description": "Trang bạn đang truy cập không tồn tại.",
+    "message": "Về trang chủ"
   }
 }

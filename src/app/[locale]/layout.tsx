@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import { notFound } from "next/navigation";
 import { Locale } from "@/i18n/config";
 import { routing } from "@/i18n/routing";
@@ -10,7 +11,6 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
-import "../globals.css";
 
 const quicksand = Quicksand({ subsets: ["vietnamese"], weight: ["400"] });
 
@@ -108,7 +108,14 @@ export default async function RootLayout({
     <html lang={t("lang")} suppressHydrationWarning>
       <body className={quicksand.className}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>

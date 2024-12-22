@@ -1,0 +1,351 @@
+---
+title: "React 19 released, what's now?"
+publishedAt: "2024-12-15"
+summary: "What do the updates offer to the devs?"
+category: "react"
+---
+
+After a long developing canary version since April, 2024. React 19 was offically released on December 5th, 2024 by Meta team.
+
+Powerful new features have been introduced almost two years after the release of React 18.3 that can make your codebase obsolete overnight.
+
+![React](https://i.ibb.co/G3P6n4Y/react19.png)
+
+## New `use` api function
+
+A brand new `React Hook` that&#39;s quite unique because it can be called **conditionally** without throwing an error. It allows you to read the value of a **Context** or a **Promise**.
+
+```js
+const value = use(resources);
+```
+
+For example:
+
+```js
+import { use } from "react";
+
+function Message({ promiseForMessage }) {
+  const message = use(promiseForMessage);
+
+  return <div className="message">{message.text}</div>;
+}
+```
+
+```js
+import { Suspense } from "react";
+import Message from "./Message";
+
+function App() {
+  const promiseForMessage = fetch(
+    "https://jsonplaceholder.typicode.com/message",
+  ).then((res) => res.json());
+
+  return (
+    <Suspense fallback={<div>Loading</div>}>
+      <Message promiseForMessage={promiseForMessage} />;
+    </Suspense>
+  );
+}
+```
+
+## Refreshed `refs`
+
+Introduces new features for `refs`.
+
+In practice, `refs` are now passed as **props** rather than having to use the React Hook `forwardRef`.
+
+Example use case:
+
+```js
+function Button({ ref, children }) {
+  return <button ref={ref}>{children}</button>;
+}
+```
+
+## New `useOptimistic` hook
+
+The `useOptimistic` Hook allows us to **update** the interface **before** the data is changed on the server, in order to **reduce** waiting time and increase the fluidity of requests.
+
+For instance:
+
+```js
+import { useOptimistic, useState } from "react";
+
+function Messages() {
+  const [messages, setMessages] = useState([
+    {
+      id: 4,
+      content: "Hey",
+      pending: false,
+    },
+  ]);
+
+  const [optimisticMessages, newOptimisticMessage] = useOptimistic(
+    messages,
+    (state, newMessage) => [
+      ...state,
+      {
+        id: `newMessage-${messages.length}`,
+        content: newMessage,
+        pending: true,
+      },
+    ],
+  );
+
+  return (
+    <>
+      <div>
+        {optimisticMessages.map((message) => (
+          <div
+            key={message.id}
+            style={{ background: message.pending ? "gray" : "transparent" }}
+          >
+            {message.content}
+          </div>
+        ))}
+      </div>
+
+      <form
+        action={async (data) => {
+          const newMessage = data.get("content");
+          newOptimisticMessage(newMessage);
+          await sendNewMessageToBackend(newMessage);
+        }}
+      >
+        <input type="text" name="content" placeholder="Your new message" />
+        <button type="submit">Add my message</button>
+      </form>
+    </>
+  );
+}
+```
+
+## Meta Tags Supports
+
+For example, here's how you can **customize meta tags with React 19**:
+
+```js
+function MainPage() {
+  return (
+    <>
+      <title>Hello Main Page</title>
+      <meta name="description" content="This is a website" />
+    </>
+  );
+}
+```
+
+## Server Components
+
+Already present in the [NextJS](https://nextjs.org/) framework, they are finally officially arriving in React 19!
+
+Components which are loaded **by the client**, resulted in **long loading times**, doesn&#39;t suitable for a fast enterprise environment. React 19 has introduced **Server Components** as a solution.
+
+In **Server Components**, the server itself loads the bundle and sends it ready for display to the user.
+
+**Server Components** have several advantages:
+
+1. The computing power used is that of the server, not the client's device, which improves the site's loading performance and thus its search engine ranking.
+
+2. Server Components have **full access** to back-end resources (such as the file system). The data is secured because it doesn't pass through the client.
+
+3. The client receives a **minimal** version of the bundle without the **dependencies** that were used to build the page.
+
+The example:
+
+```js
+"use server";
+
+export default async function articles() {
+  const res = await fetch("https://api.example.com/articles");
+
+  const articles = res.json();
+
+  return (
+    <>
+      {articles.map((article) => (
+        <div key={article.id}>{article.title}</div>
+      ))}
+    </>
+  );
+}
+```
+
+But there are significant drawbacks:
+
+1. Cannot use Hooks like `useState`, `useEffect`.
+
+2. Cannot access browser-integrated functionalities like **local storage**.
+
+3. Some **Custom Hooks** cannot be used if they depend on browser functionalities (some dependencies, therefore, do not work in a Server Component).
+
+## Server Actions
+
+With React 19, it is now possible to use Server Actions. These allow us to execute a method **on the server**, thereby securing API calls and data.
+
+Here&#39;s the form example with Server Actions:
+
+```js
+function FormComponent() {
+  async function register(data) {
+    "use server";
+    const newUser = {
+      pseudo: data.get("pseudo"),
+      password: data.get("password"),
+    };
+
+    await fetch("...");
+  }
+
+  return (
+    <form action={register}>
+      <input name="pseudo" placeholder="Username" id="pseudo" />
+      <input name="password" placeholder="Password" id="password" />
+      <button type="submit">Create my account</button>
+    </form>
+  );
+}
+```
+
+A few things to note about Server Actions:
+
+- The attribute used is `action` instead of `onSubmit`
+
+- You need to specify `use server` in the method you call to execute it on the server
+
+- The data is sent by React to the called method
+
+## New hooks `useFormStatus()` and `useActionState()`
+
+To use Server Actions, React 19 introduces two new Hooks: `useFormStatus()` and `useActionState()`.
+
+Each of these Hooks allows us to modify our code based on the actions used.
+
+### About `useFormStatus()`
+
+The following way to use it:
+
+```js
+const { pending, data, method, action } = useFormStatus();
+```
+
+Here's what these different names correspond to:
+
+- `pending` - To know the state of the form and whether it is being submitted (`true` if yes, `false` if no)
+
+- `data` - To retrieve the transmitted data as an object
+
+- `method` - To retrieve the HTTP method
+
+- `action` - To execute a function passed by reference
+
+Or **a simpilfied version**:
+
+```js
+const { status } = useFormStatus();
+```
+
+Example:
+
+```js
+import { useFormStatus } from "react";
+
+function SubmitButton() {
+  const status = useFormStatus();
+
+  return (
+    <button disabled={status.pending}>
+      {status.pending ? "Loading..." : "Send"}
+    </button>
+  );
+}
+
+async function serverAction() {
+  "use server";
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+}
+
+export default function Form() {
+  return (
+    <form action={serverAction}>
+      <SubmitButton />
+    </form>
+  );
+}
+```
+
+It is thus very useful for modifying the interface based on form submissions, for example.
+
+### About `useActionState()`
+
+```js
+const [state, formAction, isPending] = useActionState(action, 0);
+```
+
+Here we have:
+
+- `state` - Represents the initial state on the first render and the state updated by the **action** function passed as a parameter (you&#39;ll understand better in the example)
+
+- `formAction` - A new action that can be used in the formAction attribute of a button
+
+- `isPending` - To detect when an action is being performed or not (and thus to change the interface accordingly)
+
+Finally, we pass to `useActionState`:
+
+- `action` - the method we want to use when the form is submitted
+
+- `0` - our initial state
+
+Example:
+
+```js
+import { useActionState } from "react";
+
+async function add(prevState, data) {
+  return prevState + 1;
+}
+
+export default function Form() {
+  const [state, formAction, isPending] = useActionState(add, 0);
+
+  return (
+    <form>
+      {state}
+      <button formAction={formAction}>Add</button>
+    </form>
+  );
+}
+```
+
+## React Compiler
+
+Although it didn&#39;t have an official release yet, but you can download the **test** version from Meta team instead:
+
+```bash
+npm i babel-plugin-react-compiler
+```
+
+And following the tutorial how to use the **React Compiler** on any React-based framework on their official documents.
+
+It's promising on changing our way to optimize our React code. Like removing:
+
+- `useMemo`
+
+- `useCallback`
+
+- `memo`
+
+- ...
+
+> ### Note
+>
+> Test version has some weird rendering issues because React community packages currently don&#39;t have support the magic that the **compiler** offers yet.
+> Using with caution.
+
+## Conclusion
+
+React offer big updates which benefit us, however, Meta has a lot of work to do to satisfy the front-end developers.
+
+> ### Note
+>
+> This article was inspired by [BelieveMy](https://believemy.com/en/r/whats-new-in-react-19), I just make everything in a nutshell as much as possible.

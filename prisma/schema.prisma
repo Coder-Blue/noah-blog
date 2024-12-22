@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("SUPABASE_DATABASE_URL")
+  directUrl = env("SUPABASE_DIRECT_URL")
+}
+
+model Blog {
+  id         Int      @id @default(autoincrement())
+  slug       String   @unique
+  title      String
+  category   String
+  view_count Int      @default(1)
+  updatedAt  DateTime @default(now())
+}
+
+model Subscriber {
+  id            Int     @id @default(autoincrement())
+  email         String  @unique
+  is_subscribed Boolean @default(true)
+}

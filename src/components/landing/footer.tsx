@@ -13,11 +13,11 @@ function Footer() {
   return (
     <section className="flex flex-wrap items-center justify-between gap-5 border-t border-black-300 px-5 pb-3 pt-7 sm:px-10">
       <div className="flex gap-2 text-white-500">
-        <Link href="/terms-of-services">
+        <Link href="/blog/terms-of-services">
           <p>{t("footer.terms")}</p>
         </Link>
         <p> | </p>
-        <Link href="/privacy-policy">
+        <Link href="/blog/privacy-policy">
           <p>{t("footer.policy")}</p>
         </Link>
       </div>
@@ -58,7 +58,9 @@ function Footer() {
           <HeartIcon className="size-1/2 text-white" />
         </Link>
       </div>
-      <p className="text-white-500">© 2024 Noah Trần. {t("footer.right")}</p>
+      <p className="text-white-500">
+        &copy; 2024 Noah Trần. {t("footer.right")}
+      </p>
     </section>
   );
 }

@@ -26,7 +26,9 @@ export default function Hero() {
           <h1 className={cn("text-white", styles.heroHeadText)}>
             {t.rich("hero.title", {
               span: (chunks) => (
-                <span className="text-[#89CFF0]">{chunks}</span>
+                <span className="title-span-gradient animate-span_gradient text-transparent">
+                  {chunks}
+                </span>
               ),
             })}
           </h1>

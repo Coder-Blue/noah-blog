@@ -1,0 +1,52 @@
+---
+title: "Giới thiệu Codium IDE của Alex313031 với người Việt"
+publishedAt: "2024-12-16"
+summary: "Codium, một bản fork của Visual Code Studio nhẹ, tối ưu đáng sử dụng"
+category: "tools"
+---
+
+VSCode đã thống trị các Code Editor đủ lâu, nhờ vào sự tiện lợi, không cầu kì như NeoVim/Vim, không nặng nề như các IDE nhà JetBrains. Nhưng có những vấn đề tồn đọng trong VSCode:
+
+1. Nó là sản phẩm nhà Microsoft, vì vậy không thể dám chắc chắn dữ liệu, và mã nguồn của bạn sẽ không trở thành tài liệu học tập cho một con AI nào đó, hoặc nó sẽ không về với tay các bên quảng cáo.
+
+2. Nó được build trên nền ElectronJS, vốn không an toàn cho RAM của những người dùng tài nguyên yếu, khi Electron thật sự sẽ ship một bản Chromium to nặng vào PC bạn, mà ai cũng rõ vụ Google Chrome ăn RAM cỡ nào ha?
+
+Khi bạn quá quen thuộc và vẫn muốn sử dụng VSCode mà né tránh được 75% vấn đề nêu trên thì hãy thử qua các bản fork mã nguồn mở VSCode của cộng đồng.
+
+Trong đó tiêu biểu nhất, tác giả đã tìm ra Codium của Alex313031, một bản fork của VSCodium, vốn là một tập hợp mã nguồn mở để build VSCode mà không có sự can thiệp của Microsoft có tiếng nói lớn trong cộng đồng.
+
+## Codium
+
+Alex313031 là một lập trình viên đã có những sản phẩm hiệu năng cao cho cộng đồng như Thorium, Mecury, etc vốn cũng là những bản fork mã nguồn mở miễn phí của Chromium và Firefox. Nên việc cậu ta có kinh nghiệm để cải thiện VSCode cũng không có gì lấy làm bất ngờ.
+
+Theo trải nghiệm sử dụng của bản thân, Codium hoạt động hoàn toàn giống hệt VSCode mà không có bất kì vấn đề gì. Có vẻ như Alex313031 đã biên soạn lại trình biên dịch `-O3 -msse3 compiler` tối ưu cho nhiều dòng CPU cũ hơn và cần ít tài nguyên bộ nhớ hơn để lưu trữ các tác vụ.
+
+Hợp lý cho những bạn học lập trình nhưng máy lại yếu, ít RAM. Hoặc chỉ đơn giản là bạn hận Microsoft quá thôi.
+
+Tôi nói được tất cả những điều trên từ việc sử dụng nó trên con Laptop ghẻ mua từ năm 2014 tên `Dell Inspiron 15 5548` với 12GB `DDR3L RAM` và CPU `Core i5 5200U`.
+
+## Ưu điểm
+
+- Hỗ trợ nhiều hệ điều hành cả mới lẫn cũ, đương nhiên bao gồm Windows 7, Windows 8, và MacOS, hoặc kể cả các bản Distro Linux cũ.
+
+- Tối ưu lại trình biên dịch của ElectronJS để hợp với các CPU kiến trúc X86 với tập lệnh `AVX` hay `AVX2` cũ hoặc kể các CPU kiến trúc ARM tiết kiệm điện.
+
+- An tâm không sợ Microsoft sờ vào quyền riêng tư của bạn.
+
+- Bạn có thể dựa vào kho mã nguồn/repo trên Github của Alex313031 về Codium để có thể tự build cho bản thân một phiên bản tùy chỉnh của riêng mình.
+
+## Nhược điểm
+
+- Logo hơi xấu
+
+- Một số `extension` tiện ích chỉ có thể sử dụng trong bản chính thức, Codium không thể tải và sử dụng được. Bạn buộc phải mày mò lâu hơn để tìm các tiện ích cộng đồng thay thế đúng ý.
+
+- Bạn không thể đăng nhập tài khoản Github của bạn như trên VSCode bản chính thức, điều này có nghĩa sau này bạn không có thể đồng bộ hóa các cài đặt khi đổi máy, cài lại hệ điều hành.
+
+## Kết luận
+
+Từ những đút kết từ chính cái tôi của tác giả, người đang phải lập trình trong điều kiện hơi gạc tàn, thì mong tôi đã giúp đõ các bạn lập trình viên hoàn cảnh khó khăn khác tìm thấy công cụ nhẹ, mượt đúng ý mình.
+
+Hoặc chỉ đơn giản là giúp bạn tìm ra một Code Editor khác để nghịch mã nguồn và tùy chỉnh.
+
+Nhưng nếu bạn chưa đủ thỏa mãn và có thừa thời gian để tùy chỉnh cho Code Editor thì cứ thử qua NeoVim cho nó oách xà lách, thử đi, bạn đau não tôi không chịu trách nhiệm đâu, người ta đã giới thiệu con Code Editor ngon như này rồi vẫn không chịu, thì quỳ bạn đọc rồi.

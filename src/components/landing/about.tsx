@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from "@/hoc";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ import { styles } from "./styles";
 function About() {
   const t = useTranslations("LandingPage");
 
-  const services = [
+  const services: { title: string; icon: StaticImageData | string }[] = [
     {
       title: t("about.web"),
       icon: web,

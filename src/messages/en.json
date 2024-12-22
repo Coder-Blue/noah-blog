@@ -99,9 +99,87 @@
       }
     },
     "footer": {
-      "terms": "Terms & Conditions",
+      "terms": "Terms of Services",
       "policy": "Privacy Policy",
       "right": "All rights reserved"
     }
+  },
+  "BlogPage": {
+    "metadataTitle": "Blog",
+    "frontPage": {
+      "title": "Recently Published",
+      "categories": {
+        "title": "TOP CATEGORIES"
+      },
+      "posts": {
+        "title": "POPULAR POSTS"
+      },
+      "footer": {
+        "description": "Stay Up to Date with the latest news and insights from our blog.",
+        "mainLabel": "Blog",
+        "link": {
+          "label": "Links",
+          "contactLabel": "Contact",
+          "terms": "Terms of Services",
+          "policy": "Privacy Policy",
+          "sitemapLabel": "Sitemap"
+        },
+        "newletter": {
+          "title": "Newletter",
+          "description": "Subscribe to our newsletter to stay up-to-date with the latest news and updates.",
+          "emailInput": {
+            "placeholder": "Enter your email",
+            "submitButton": {
+              "loading": "Loading...",
+              "normal": "Subscribe"
+            }
+          },
+          "right": "All rights reserved"
+        }
+      }
+    },
+    "mainNav": {
+      "title": "Posts",
+      "themeToggler": {
+        "title": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      },
+      "about": "About Me",
+      "languageToggle": "Language",
+      "life": {
+        "title": "Life",
+        "description": "How is my life going? And some of my daily advices."
+      },
+      "philosophy": {
+        "title": "Philosophy",
+        "description": "Sharing about my personal perspective."
+      },
+      "faq": {
+        "title": "Facts and Questions",
+        "description": "You asked through email, I answered with my blog"
+      },
+      "react": {
+        "description": "Updating and sharing about my skills with React UI library."
+      },
+      "svelte": {
+        "description": "Updating and sharing about my skills with Svelte UI library."
+      },
+      "tools": {
+        "title": "Tools",
+        "description": "Sharing about my daily tools that I use to get my jobs done."
+      }
+    },
+    "postPage": {
+      "breadcrumb": {
+        "title": "Home"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "title": "<span>404</span> - Page Not Found",
+    "description": "This page you are looking for does not exist.",
+    "message": "Go Home"
   }
 }

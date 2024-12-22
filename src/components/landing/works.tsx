@@ -30,7 +30,13 @@ type ProjectCardProps = {
 function Works() {
   const t = useTranslations("LandingPage");
 
-  const projects = [
+  const projects: {
+    name: string;
+    description: string;
+    tags: TagsType;
+    image: StaticImageData | string;
+    link: string;
+  }[] = [
     {
       name: "Argon Note",
       description: t("works.project1.description"),
