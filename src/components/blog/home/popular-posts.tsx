@@ -15,8 +15,8 @@ type PopularPostsProps = {
 export default function PopularPosts({ locale }: PopularPostsProps) {
   const { data, error, isLoading } = useSWR(
     process.env.NODE_ENV === "development"
-      ? `http://localhost:3000/${locale}/api/`
-      : `${process.env.NEXT_PUBLIC_URL}/${locale}/api/`,
+      ? `http://localhost:3000/${locale}/blog/api/`
+      : `${process.env.NEXT_PUBLIC_URL}/${locale}/blog/api/`,
     fetcher,
   );
   const t = useTranslations("BlogPage");

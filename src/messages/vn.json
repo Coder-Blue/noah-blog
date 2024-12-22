@@ -178,6 +178,18 @@
     },
     "swrFetch": {
       "errorStatus": "Không thể tải"
+    },
+    "TermsOfServices": {
+      "metadata": {
+        "title": "Điều khoản dịch vụ",
+        "description": "Trang này giải thích các điều khoản sử dụng của trang web."
+      }
+    },
+    "PrivacyPolicy": {
+      "metadata": {
+        "title": "Chính sách riêng tư",
+        "description": "Trang này giải thích Chính sách quyền riêng tư của trang web."
+      }
     }
   },
   "NotFoundPage": {

@@ -21,12 +21,12 @@ export default function ReportViews({
       try {
         await fetch(
           process.env.NODE_ENV === "development"
-            ? `http://localhost:3000/${locale}/api/`
-            : `${process.env.NEXT_PUBLIC_URL}/${locale}/api/`,
+            ? `http://localhost:3000/${locale}/blog/api/`
+            : `${process.env.NEXT_PUBLIC_URL}/${locale}/blog/api/`,
           {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+              "content-type": "application/json",
             },
             body: JSON.stringify({ slug, title, category }),
           },

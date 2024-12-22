@@ -1,5 +1,9 @@
+"use client";
+
+import { useActionState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { createSubscriber } from "@/lib/actions";
 import Image from "next/image";
 import Form from "next/form";
 import { Input } from "@/components/ui/input";
@@ -8,6 +12,10 @@ import { Icons } from "@/components/icons";
 import { logo } from "@/public/index";
 
 export default function Footer() {
+  const initialState = { message: "", errors: {} };
+
+  const [state, dispatch] = useActionState(createSubscriber, initialState);
+
   const t = useTranslations("BlogPage");
 
   const posts: { title: string; href: string }[] = [
@@ -131,7 +139,7 @@ export default function Footer() {
             <p className="text-sm text-gray-500 dark:text-gray-400">
               {t("frontPage.footer.newletter.description")}
             </p>
-            <Form action={"todo"}>
+            <Form action={dispatch}>
               <div className="flex space-x-2">
                 <Input
                   type="email"
@@ -145,6 +153,24 @@ export default function Footer() {
                   aria-describedby="email-error"
                 />
                 <SubmitButton />
+              </div>
+              <div
+                id="email-error"
+                aria-label="polite"
+                aria-atomic="true"
+                className="px-1"
+              >
+                {state?.errors?.email && (
+                  <p
+                    key={state.errors.email[0]}
+                    className="text-xs text-red-500"
+                  >
+                    {state.errors.email[0]}
+                  </p>
+                )}
+                {!state?.errors?.email && (
+                  <p className="text-xs text-green-500">{state?.message}</p>
+                )}
               </div>
             </Form>
           </div>

@@ -178,6 +178,18 @@
     },
     "swrFetch": {
       "errorStatus": "Failed to load"
+    },
+    "TermsOfServices": {
+      "metadata": {
+        "title": "Terms Of Services",
+        "description": "This page explains the terms of use of the site."
+      }
+    },
+    "PrivacyPolicy": {
+      "metadata": {
+        "title": "Privary Policy",
+        "description": "This page explains the Privacy Policy of the site."
+      }
     }
   },
   "NotFoundPage": {

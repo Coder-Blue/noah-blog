@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { promises as dns } from "dns";
 import matter from "gray-matter";
 
 function getMDXFiles(dir: string) {
@@ -24,6 +25,36 @@ function getMDXData(dir: string) {
       content,
     };
   });
+}
+
+export function getTermsOfServices() {
+  return getMDXData(
+    path.join(
+      process.cwd(),
+      "src",
+      "app",
+      "[locale]",
+      "(blog)",
+      "blog",
+      "(others)",
+      "terms-of-services",
+    ),
+  );
+}
+
+export function getPrivacyPolicy() {
+  return getMDXData(
+    path.join(
+      process.cwd(),
+      "src",
+      "app",
+      "[locale]",
+      "(blog)",
+      "blog",
+      "(others)",
+      "privacy-policy",
+    ),
+  );
 }
 
 export function getBlogPosts() {
@@ -77,4 +108,30 @@ export function formatDate(date: string, includeRelative = false) {
   }
 
   return `${fullDate} (${formattedDate})`;
+}
+
+export async function validateEmailAddress(emailAddress: string) {
+  const invalidDomains = [
+    "tempmail.com",
+    "example.com",
+    "email.com",
+    "eamil.com",
+    "test.com",
+  ];
+  const [user, domain] = emailAddress.split("@");
+
+  if (invalidDomains.includes(domain)) {
+    return false;
+  }
+
+  try {
+    const mxRecords = await dns.resolveMx(domain);
+
+    if (!mxRecords || mxRecords.length === 0) {
+      return false;
+    }
+    return true;
+  } catch (error: any) {
+    console.error(error.code);
+  }
 }
