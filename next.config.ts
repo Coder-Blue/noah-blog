@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   transpilePackages: ["next-mdx-remote"],
-  output: "standalone",
   images: {
     remotePatterns: [
       {

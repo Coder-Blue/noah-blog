@@ -58,18 +58,7 @@ export function getPrivacyPolicy() {
 }
 
 export function getBlogPosts() {
-  return getMDXData(
-    path.join(
-      process.cwd(),
-      "src",
-      "app",
-      "[locale]",
-      "(blog)",
-      "blog",
-      "post",
-      "contents",
-    ),
-  );
+  return getMDXData(path.resolve(process.cwd(), "src/contents"));
 }
 
 export function formatDate(date: string, includeRelative = false) {
