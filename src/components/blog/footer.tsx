@@ -124,6 +124,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="https://github.com/Coder-Blue/noah-blog"
+                  target="_blank"
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                >
+                  Github Repo
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/sitemap.xml"
                   className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                 >
