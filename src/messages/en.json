@@ -5,7 +5,9 @@
     "description": "A personal blog and portfolio built with NextJS by Noah Trần",
     "ogImgUrl": "https://i.ibb.co/SmHPc04/og-en.png",
     "ogDescription": "A place that Noah can freely share about his personal life.",
-    "ogLocale": "en_CA"
+    "ogLocale": "en_CA",
+    "localeFormat": "en",
+    "rssDescription": "This is my Technical Blog RSS feed"
   },
   "LandingPage": {
     "metadataTitle": "Home",
@@ -106,6 +108,11 @@
   },
   "BlogPage": {
     "metadataTitle": "Blog",
+    "timeFormat": "en-US",
+    "localeFormat": "en",
+    "Metadata": {
+      "description": "All of the articles, blogs writen by Noah Trần"
+    },
     "frontPage": {
       "title": "Recently Published",
       "categories": {
@@ -190,6 +197,9 @@
         "title": "Privary Policy",
         "description": "This page explains the Privacy Policy of the site."
       }
+    },
+    "CategoryMetadata": {
+      "description": "All articles reagarding"
     }
   },
   "NotFoundPage": {

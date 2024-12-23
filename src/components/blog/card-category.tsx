@@ -1,4 +1,5 @@
 import { formatDate } from "@/app/[locale]/(blog)/blog/post/utils";
+import { useTranslations } from "next-intl";
 import {
   Card,
   CardContent,
@@ -18,6 +19,8 @@ export default function CardCategory({
   summary,
   date,
 }: CardCategoryProps) {
+  const t = useTranslations("BlogPage");
+
   return (
     <Card className="h-[290px] w-[350px] shadow-lg">
       <CardHeader>
@@ -27,7 +30,9 @@ export default function CardCategory({
         <p>{summary}</p>
       </CardContent>
       <CardFooter>
-        <p className="text-xs text-gray-500">{formatDate(date)}</p>
+        <p className="text-xs text-gray-500">
+          {formatDate(date, t("timeFormat"))}
+        </p>
       </CardFooter>
     </Card>
   );

@@ -33,7 +33,7 @@ export default function LatestPosts() {
             </Link>
             <p className="my-5 leading-8">{post.metadata.summary}</p>
             <p className="text-sm text-muted-foreground">
-              {formatDate(post.metadata.publishedAt)}
+              {formatDate(post.metadata.publishedAt, t("timeFormat"))}
             </p>
           </article>
         ))}

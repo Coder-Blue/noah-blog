@@ -1,25 +1,19 @@
 "use client";
 
 import { Link } from "@/i18n/routing";
-import { Locale } from "@/i18n/config";
 import { useTranslations } from "next-intl";
 import useSWR from "swr";
-import { fetcher } from "@/lib/utils";
+import { fetcher, fetcherUrl } from "@/lib/utils";
 import SkeletonCards from "@/components/blog/skeleton/posts-skeleton";
 import { Icons } from "@/components/icons";
 
-type PopularPostsProps = {
-  locale: Locale;
-};
+export default function PopularPosts() {
+  const t = useTranslations("BlogPage");
 
-export default function PopularPosts({ locale }: PopularPostsProps) {
   const { data, error, isLoading } = useSWR(
-    process.env.NODE_ENV === "development"
-      ? `http://localhost:3000/${locale}/blog/api/`
-      : `${process.env.NEXT_PUBLIC_URL}/${locale}/blog/api/`,
+    fetcherUrl(t("localeFormat")),
     fetcher,
   );
-  const t = useTranslations("BlogPage");
 
   if (error) return <div>{t("swrFetch.errorStatus")}</div>;
 

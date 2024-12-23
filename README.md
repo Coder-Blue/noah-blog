@@ -1,14 +1,12 @@
 # TLDR;
 
-- a simple porfolio website made with three.js, next.js, next-intl, shadcn/ui _("update more later")_.
-
-- gonna update the blog feature asap
+- a simple blog and porfolio website made with three.js, next.js, next-intl, shadcn/ui, next-mdx-remote, etc.
 
 # Why does this exist?
 
 - i'm bored.
 
-- youtuber for website inspiration: [JavaScript Mastery](https://www.youtube.com/@javascriptmastery)
+- youtuber for website inspiration: [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) and [Coding Jitsu](https://www.youtube.com/@codingjitsu)
 
 # Donate
 

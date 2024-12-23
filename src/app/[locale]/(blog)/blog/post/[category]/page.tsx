@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { getBlogPosts } from "@/app/[locale]/(blog)/blog/post/utils";
+import { getTranslations } from "next-intl/server";
+import { Locale } from "@/i18n/config";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { Locale } from "@/i18n/config";
 import { CardCategory, Container, Header } from "@/components/blog";
 
 type CategoryPageProps = {
@@ -14,6 +16,20 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     category: post.metadata.category,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: CategoryPageProps): Promise<Metadata> {
+  const category = (await params).category;
+  const locale = (await params).locale;
+
+  const t = await getTranslations({ locale, namespace: "BlogPage" });
+
+  return {
+    title: category.toLocaleUpperCase(),
+    description: `${t("CategoryMetadata.description")} ${category}`,
+  };
 }
 
 async function CategoryPage({ params }: CategoryPageProps) {

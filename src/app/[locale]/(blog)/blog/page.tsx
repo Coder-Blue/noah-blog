@@ -51,7 +51,7 @@ async function BlogMainPage({ params }: BlogMainPageProps) {
           </div>
           <div className="sticky top-0 mt-10">
             <h1 className="mt-4 font-bold">{t("frontPage.posts.title")}</h1>
-            <PopularPosts locale={locale} />
+            <PopularPosts />
           </div>
         </div>
       </main>

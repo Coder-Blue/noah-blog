@@ -5,7 +5,9 @@
     "description": "Một trang porfolio kiêm blog cá nhân được làm với NextJS bởi Anh Quân.",
     "ogImgUrl": "https://i.ibb.co/QYGVpKq/og-vi.png",
     "ogDescription": "Một nơi mà Quân có thể chia sẻ bản thân một cách tự do.",
-    "ogLocale": "vi_VN"
+    "ogLocale": "vi_VN",
+    "localeFormat": "vn",
+    "rssDescription": "Đây là nguồn kỹ thuật cung cấp feed cho blog RSS"
   },
   "LandingPage": {
     "metadataTitle": "Trang chủ",
@@ -106,6 +108,11 @@
   },
   "BlogPage": {
     "metadataTitle": "Bài viết",
+    "timeFormat": "vi-VN",
+    "localeFormat": "vn",
+    "Metadata": {
+      "description": "Tất cả những bài báo, blog viết bởi Noah Trần"
+    },
     "frontPage": {
       "title": "Đăng tải gần đây",
       "categories": {
@@ -190,6 +197,9 @@
         "title": "Chính sách riêng tư",
         "description": "Trang này giải thích Chính sách quyền riêng tư của trang web."
       }
+    },
+    "CategoryMetadata": {
+      "description": "Mọi bài viết liên quan tới"
     }
   },
   "NotFoundPage": {

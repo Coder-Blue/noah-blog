@@ -21,7 +21,7 @@ Thì tôi, tác giả bài viết muốn giới thiệu cho các bạn đọc m�
 
 ## Svelte là gì?
 
-Svelte là một thư viện UI JavaScript đơn giản được tạo ra bởi Rich Harris, hiện có thể sử dụng mặc định với Vite, một build tool tốc độ và hiệu năng cao. Thậm chí nếu bạn muốn một meta-framework như NextJS với React thì Svelte có SvelteKit.
+[Svelte](https://svelte.dev/docs/svelte) là một thư viện UI JavaScript đơn giản được tạo ra bởi Rich Harris, hiện có thể sử dụng mặc định với Vite, một build tool tốc độ và hiệu năng cao. Thậm chí nếu bạn muốn một meta-framework như NextJS với React thì Svelte có SvelteKit.
 
 Svelte khác với React hay Vue đó là cách viết độc đáo, ngắn gọn của nó nhưng lại cho ra kết quả tốt ngang ngửa thậm chí có nhiều trường hợp tốt hơn. Nhưng thứ ma thuật nào góp phần vào thành công này? Đó là **Svelte Compiler**, một bộ biên dịch tối ưu.
 
@@ -61,11 +61,35 @@ export default function Counter() {
 }
 ```
 
+## Thế còn SvelteKit?
+
+[SvelteKit](https://svelte.dev/docs/kit) là một Svelte framework hoàn chỉnh (metaframework) được chính cha đẻ Rich Harris tạo nên, dựa trên kiến trúc cây thành phần (components tree). Nếu bạn đến từ React thì nó tương tự như NextJS, còn bạn sử dụng Vue thì nó như NuxtJS.
+
+Nó bao gồm hoàn toàn đầy đủ những gì bạn cần để build web:
+
+- Điều hướng (Routing)
+
+- SSR - Render Web từ server (Server-side Rendering)
+
+- Lấy dữ liệu
+
+- TypeScript
+
+- SEO - Tối ưu công cụ tìm kiếm (Search Engine Optimization)
+
+- Tối ưu gói sau khi build (bundler/packaging)
+
+- Prerendering
+
+- Services Worker
+
+- ...
+
 ## Ưu điểm
 
 - Svelte không sử dụng DOM ảo
 
-- Svelte xuất bundle ra khá nhẹ, và tốc độ rerender cao
+- Svelte xuất bundle ra khá nhẹ, và tốc độ render nhanh
 
 - Dễ học nếu bạn đã có kiến thức cơ bản với HTML, JavaScript
 

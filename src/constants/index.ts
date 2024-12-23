@@ -79,4 +79,13 @@ const categories: { title: string; href: string }[] = [
   { title: "Tools", href: "tools" },
 ];
 
-export { technologies, categories };
+const posts: { href: string }[] = [
+  { href: "/blog/post/life" },
+  { href: "/blog/post/philosophy" },
+  { href: "/blog/post/faq" },
+  { href: "/blog/post/react" },
+  { href: "/blog/post/svelte" },
+  { href: "/blog/post/tools" },
+];
+
+export { technologies, categories, posts };
