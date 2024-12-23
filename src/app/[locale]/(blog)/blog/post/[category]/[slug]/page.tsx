@@ -87,6 +87,26 @@ async function SlugPostPage({ params }: SlugPostPageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.metadata.title,
+            datePublished: post.metadata.publishedAt,
+            dateModified: post.metadata.publishedAt,
+            description: post.metadata.summary,
+            image: t("Metadata.ogImgUrl"),
+            url: `${baseUrl(t("localeFormat"))}/blog/post/${post?.metadata.category}/${post?.slug}`,
+            author: {
+              "@type": "Person",
+              name: "Noah Trần Blog",
+            },
+          }),
+        }}
+      />
       <ReportViews
         slug={post.slug}
         title={post.metadata.title}
