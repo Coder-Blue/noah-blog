@@ -111,7 +111,10 @@
     "timeFormat": "vi-VN",
     "localeFormat": "vn",
     "Metadata": {
-      "description": "Tất cả những bài báo, blog viết bởi Noah Trần"
+      "description": "Tất cả những bài báo, blog viết bởi Noah Trần",
+      "ogImgUrl": "https://i.ibb.co/QYGVpKq/og-vi.png",
+      "ogLocale": "vi_VN",
+      "defaultTitle": "Blog cá nhân của Quân"
     },
     "frontPage": {
       "title": "Đăng tải gần đây",

@@ -29,6 +29,31 @@ export async function generateMetadata({
       },
     ],
     keywords: ["Blog", "Rss", "Xml", "React", "Svelte", "Noah"],
+    openGraph: {
+      type: "website",
+      locale: t("Metadata.ogLocale"),
+      alternateLocale: ["en_CA", "vi_VN"],
+      url: `${process.env.NEXT_PUBLIC_URL}/${t("localeFormat")}/blog/`,
+      title: t("Metadata.defaultTitle"),
+      description: t("Metadata.description"),
+      siteName: t("Metadata.defaultTitle"),
+      images: [
+        {
+          url: t("Metadata.ogImgUrl"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("Metadata.defaultTitle"),
+      description: t("Metadata.description"),
+      creator: "@not_sh1ro",
+      images: [
+        {
+          url: t("Metadata.ogImgUrl"),
+        },
+      ],
+    },
     icons: {
       icon: "/favicon/favicon.ico",
       shortcut: "/favicon/favicon-16x16.png",

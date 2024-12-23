@@ -111,7 +111,10 @@
     "timeFormat": "en-US",
     "localeFormat": "en",
     "Metadata": {
-      "description": "All of the articles, blogs writen by Noah Trần"
+      "description": "All of the articles, blogs writen by Noah Trần",
+      "ogImgUrl": "https://i.ibb.co/SmHPc04/og-en.png",
+      "ogLocale": "en_CA",
+      "defaultTitle": "Noah's Personal Blog"
     },
     "frontPage": {
       "title": "Recently Published",

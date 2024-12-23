@@ -41,7 +41,6 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
     title,
     publishedAt: publishedTime,
     summary: description,
-    image,
   } = post.metadata;
 
   return {
@@ -52,12 +51,24 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
       title,
       description,
       publishedTime,
+      locale: t("Metadata.ogLocale"),
+      alternateLocale: ["en_CA", "vi_VN"],
       url: `${baseUrl(t("localeFormat"))}/blog/post/${post?.metadata.category}/${post?.slug}`,
+      images: [
+        {
+          url: t("Metadata.ogImgUrl"),
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [
+        {
+          url: t("Metadata.ogImgUrl"),
+        },
+      ],
     },
   } satisfies Metadata;
 }
