@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
       publishedTime,
       locale: t("Metadata.ogLocale"),
       alternateLocale: ["en_CA", "vi_VN"],
+      siteName: title,
       url: `${baseUrl(t("localeFormat"))}/blog/post/${post?.metadata.category}/${post?.slug}`,
       images: [
         {
