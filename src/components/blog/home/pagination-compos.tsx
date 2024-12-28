@@ -69,7 +69,7 @@ export function PaginationControls({
             )}
           />
         </PaginationItem>
-        {pageNumbers.map((number) => {
+        {pageNumbers.map((number, index) => {
           const pageNum = number;
           const isEdgePage =
             pageNum === 1 ||
@@ -77,7 +77,7 @@ export function PaginationControls({
           const isNearCurrentPage = Math.abs(pageNum - Number(page)) <= 2;
 
           if (!isEdgePage && !isNearCurrentPage) {
-            if (number === 1 || number === pageNumbers.length - 2) {
+            if (index === 1 || number === pageNumbers.length - 2) {
               return (
                 <PaginationItem key={pageNum} className="hidden md:block">
                   <PaginationEllipsis className="text-muted-foreground" />
