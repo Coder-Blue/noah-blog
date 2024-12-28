@@ -124,6 +124,10 @@
       "posts": {
         "title": "BÀI VIẾT NỔI BẬT"
       },
+      "paginationUI": {
+        "next": "Tiếp",
+        "previous": "Lùi"
+      },
       "footer": {
         "description": "Luôn cập nhật những tin tức và thông tin chi tiết mới nhất từ blog của chúng tôi.",
         "mainLabel": "Bài viết",

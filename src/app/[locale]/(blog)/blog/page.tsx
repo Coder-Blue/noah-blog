@@ -12,6 +12,7 @@ import {
 
 type BlogMainPageProps = {
   params: Promise<{ locale: Locale }>;
+  searchParams: Promise<{ page?: string }>;
 };
 
 export function generateStaticParams() {
@@ -29,8 +30,9 @@ export async function generateMetadata({
   };
 }
 
-async function BlogMainPage({ params }: BlogMainPageProps) {
+async function BlogMainPage({ params, searchParams }: BlogMainPageProps) {
   const locale = (await params).locale;
+  const page = (await searchParams).page ?? "1";
   const t = await getTranslations({ locale, namespace: "BlogPage" });
 
   setRequestLocale(locale);
@@ -40,7 +42,7 @@ async function BlogMainPage({ params }: BlogMainPageProps) {
       <MainNav locale={locale} />
       <main className="mt-16 flex flex-col items-start justify-evenly md:flex-row">
         <div>
-          <LatestPosts />
+          <LatestPosts page={page} />
         </div>
         <div className="h-screen">
           <div>

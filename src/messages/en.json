@@ -124,6 +124,10 @@
       "posts": {
         "title": "POPULAR POSTS"
       },
+      "paginationUI": {
+        "next": "Next",
+        "previous": "Previous"
+      },
       "footer": {
         "description": "Stay Up to Date with the latest news and insights from our blog.",
         "mainLabel": "Blog",

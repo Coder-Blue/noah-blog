@@ -3,11 +3,19 @@ import {
   getBlogPosts,
 } from "@/app/[locale]/(blog)/blog/post/utils";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { ArticleFeeds, PaginationControls } from "./pagination-compos";
 
-export default function LatestPosts() {
-  let latestPosts = getBlogPosts();
+type LatestPostsProps = {
+  page: number | string | undefined;
+};
+
+export default function LatestPosts({ page }: LatestPostsProps) {
+  let unfilteredPosts = getBlogPosts();
   const t = useTranslations("BlogPage");
+
+  const start = (Number(page) - 1) * 5;
+  const end = start + 5;
+  let latestPosts = unfilteredPosts.slice(start, end);
 
   return (
     <>
@@ -25,18 +33,19 @@ export default function LatestPosts() {
           return 1;
         })
         .map((post) => (
-          <article key={post.slug} className="my-10 max-w-md text-wrap">
-            <Link href={`/blog/post/${post.metadata.category}/${post.slug}`}>
-              <h3 className="py-2 font-bold leading-5 hover:text-blue-400">
-                {post.metadata.title}
-              </h3>
-            </Link>
-            <p className="my-5 leading-8">{post.metadata.summary}</p>
-            <p className="text-sm text-muted-foreground">
-              {formatDate(post.metadata.publishedAt, t("timeFormat"))}
-            </p>
-          </article>
+          <ArticleFeeds
+            key={post.slug}
+            href={`/blog/post/${post.metadata.category}/${post.slug}`}
+            title={post.metadata.title}
+            summary={post.metadata.summary}
+            fullTime={formatDate(post.metadata.publishedAt, t("timeFormat"))}
+          />
         ))}
+      <PaginationControls
+        totalPosts={unfilteredPosts.length}
+        hasNextPage={end < unfilteredPosts.length}
+        hasPrevPage={start > 0}
+      />
     </>
   );
 }
