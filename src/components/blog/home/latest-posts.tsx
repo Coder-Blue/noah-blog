@@ -42,7 +42,7 @@ export default function LatestPosts({ page }: LatestPostsProps) {
           />
         ))}
       <PaginationControls
-        totalPosts={unfilteredPosts.length}
+        totalPosts={unfilteredPosts.length || 1}
         hasNextPage={end < unfilteredPosts.length}
         hasPrevPage={start > 0}
       />

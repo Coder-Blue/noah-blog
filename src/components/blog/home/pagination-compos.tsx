@@ -69,13 +69,15 @@ export function PaginationControls({
             )}
           />
         </PaginationItem>
-        {Array.from({ length: pageNumbers.length }).map((_, index) => {
-          const pageNum = index + 1;
-          const isEdgePage = pageNum === 1 || pageNum === totalPosts;
+        {pageNumbers.map((number) => {
+          const pageNum = number;
+          const isEdgePage =
+            pageNum === 1 ||
+            (pageNum === totalPosts && pageNum === pageNumbers.length);
           const isNearCurrentPage = Math.abs(pageNum - Number(page)) <= 2;
 
           if (!isEdgePage && !isNearCurrentPage) {
-            if (index === 1 || index === totalPosts - 2) {
+            if (number === 1 || number === pageNumbers.length - 2) {
               return (
                 <PaginationItem key={pageNum} className="hidden md:block">
                   <PaginationEllipsis className="text-muted-foreground" />
