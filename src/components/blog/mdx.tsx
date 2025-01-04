@@ -7,6 +7,9 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { highlight } from "sugar-high";
 
+import remarkGfm from "remark-gfm";
+import rehypeKatex from "rehype-katex";
+
 const jetbrainFont = JetBrains_Mono({
   subsets: ["vietnamese"],
   weight: ["100"],
@@ -120,11 +123,19 @@ let components = {
   Table,
 };
 
+const options = {
+  mdxOptions: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeKatex],
+  },
+};
+
 export default function CustomMDX(props: any) {
   return (
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
+      options={options}
     />
   );
 }

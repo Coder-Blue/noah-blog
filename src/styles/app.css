@@ -168,6 +168,30 @@ body {
   @apply list-decimal pl-6;
 }
 
+.prose table {
+  @apply rounded bg-primary-foreground text-center text-primary;
+}
+
+.prose table thead {
+  @apply border-b border-solid border-secondary;
+}
+
+.prose table thead tr {
+  @apply border-r border-solid border-secondary py-4 pl-4 pr-8 text-sm font-semibold;
+}
+
+.prose table thead tr th {
+  @apply whitespace-nowrap p-2 px-4;
+}
+
+.prose table tbody tr {
+  @apply border-b border-solid border-secondary;
+}
+
+.prose table tbody tr td {
+  @apply border-r border-solid border-secondary py-4 pl-4 pr-8 text-sm font-semibold;
+}
+
 .prose > :first-child {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;

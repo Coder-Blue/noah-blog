@@ -1,5 +1,5 @@
 ---
-title: "My Codium configs for JS, TS, and Rust development"
+title: "My Codium configs for JS, TS, and Rust development in 2025"
 publishedAt: "2025-01-04"
 summary: "Sharing about my personal coding corner"
 category: "tools"
@@ -13,6 +13,8 @@ Hi, I&#39;m Noah Trần, a junior software engineer with 5 years experience. Thi
 >
 > The environment is only suitable for **JavaScript**, **TypeScript**, and a bit of **Rust**. Maybe I will release a Python or C++ version later.
 
+Let&#39;s dive into it!
+
 <Image
   src="https://i.ibb.co/W5XPDQ1/codium.png"
   alt="Codium"
@@ -20,4 +22,117 @@ Hi, I&#39;m Noah Trần, a junior software engineer with 5 years experience. Thi
   height={630}
 />
 
-My PC Hardwares:
+## My PC Hardwares:
+
+| Part | Name                                       |
+| ---- | ------------------------------------------ |
+| CPU  | Intel Core i5 2400                         |
+| GPU  | NVIDIA GeForce GTX 650 1GB                 |
+| RAM  | Silicon Power DDR3 8GBx2 1333MHz           |
+| Mobo | Afox IH61-MA5-V3                           |
+| SSD  | Silicon Power A55 SATA 3 256GB             |
+| HDD  | Seagate Barracuda ST1000DM010 1TB          |
+| PSU  | Xigmatek X Power III X450 450W             |
+| OS   | Windows 10 Pro 22H2 SuperLite GhostSpectre |
+
+I want to use Arch Linux instead of Windows 10 for better performance on these low-budget PC parts, but most of my clients use Windows so I have to use it.
+
+And the second reason why I&#39;m still using Windows, is Microsoft Office 2019.
+
+## Programming Languages Management
+
+| Programming Langs        | Applications/Package Management                   |
+| ------------------------ | ------------------------------------------------- |
+| JavaScript/TypeScript    | [NVM](https://github.com/coreybutler/nvm-windows) |
+| C++/C                    | [MingW](https://www.mingw-w64.org)                |
+| Python                   | [Python Interpreter](https://www.python.org)      |
+| Rust                     | [rust](https://www.rust-lang.org)                 |
+| Java Runtime Environment | [jre](https://www.java.com/en/download/)          |
+
+And I&#39;m using 2 JavaScript Runtime including [nodejs](https://github.com/coreybutler/nvm-windows), and [bun](https://bun.sh/).
+
+## Developing environment
+
+Because I&#39;m using [Tauri](https://tauri.app) for building Web Native App, so the environment is quite heavy.
+
+- [Microsoft Visual Studio](https://visualstudio.microsoft.com)
+- [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools)
+- [Java Development Kit](https://www.oracle.com/java/technologies/downloads)
+
+And the web browser I&#39;m using is [Thorium](https://thorium.rocks), because it uses a striped down version of the original Google&#39;s Chromium, quite lightweight for my 16GB of memory.
+
+## Code Editors Configurations
+
+I&#39;m using [Alex&#39;s Codium](https://github.com/Alex313031/codium) as my primary IDE because of the good performance, but the second code editor I would also recommend is NeoVim especially [NVChad](https://nvchad.com), and this is the [plugins config](https://github.com/Coder-Blue/nvim-config) for the NeoVim.
+
+And this is the Codium&#39;s extensions I installed:
+
+|     | Extensions                              | What can it do?                                                                                            |
+| --- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| 1   | Auto Close Tag                          | Closing HTML elements tag automatically                                                                    |
+| 2   | Auto Import                             | Importing NPM packages automatically                                                                       |
+| 3   | Auto Rename Tag                         | Renaming HTML elements tag automatically                                                                   |
+| 4   | Babel JavaScript                        | Syntax highlighting older JavaScript version like ES4 and stuffs                                           |
+| 5   | Bracket Pair Colorizer 2                | Coloring the brackets                                                                                      |
+| 6   | CodeSnap                                | Screenshoting the code snippets                                                                            |
+| 7   | Discord Rich Presence                   | Displaying your coding activities on Discord                                                               |
+| 8   | ES7 + React/Redux/React-Native snippets | Shortcuting some of the React development snippets                                                         |
+| 9   | ESLint                                  | Linting your JavaScript/TypeScript code                                                                    |
+| 10  | HTML CSS Support                        | CSS Intellisense for HTML                                                                                  |
+| 11  | HTML Snippets                           | Full HTML tags including HTML5 Snippets                                                                    |
+| 12  | Import Cost                             | Displaying import/require package size in the editor                                                       |
+| 13  | indent-rainbow                          | Making indentation easier to read                                                                          |
+| 14  | JavaScript (ES6) code snippets          | Code snippets for JavaScript in ES6 syntax                                                                 |
+| 15  | JavaScript and TypeScript Nightly       | Enables typescript@next to power VS Code's built-in JavaScript and TypeScript support                      |
+| 16  | Live Server                             | Launching a development local Server with live reload feature for static & dynamic pages                   |
+| 17  | Material Icon Theme                     | Material Design Icons for Visual Studio Code                                                               |
+| 18  | MDX                                     | Language support for MDX                                                                                   |
+| 19  | npm Intellisense                        | Autocompleting NPM modules in import statements                                                            |
+| 20  | One Hunter Theme                        | VSCode/Codium theme inspired by Vercel Theme and One Dark Pro                                              |
+| 21  | Prettier - Code formatter               | Code formatter using prettier                                                                              |
+| 22  | Prisma                                  | Adding syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files. |
+| 23  | rust-analyzer                           | Rust language support                                                                                      |
+| 24  | Svelte for VS Code                      | Svelte language support                                                                                    |
+| 25  | Tailwind CSS IntelliSense               | Intelligent Tailwind CSS tooling                                                                           |
+| 26  | Tauri                                   | Enhancing the experience of Tauri apps development                                                         |
+
+And this is the `settings.json` of the Codium.
+
+```json
+{
+  "workbench.colorTheme": "Vercel 2024 Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "extensions.autoUpdate": true,
+  "update.mode": "default",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "git.enabled": false,
+  "git.useEditorAsCommitInput": false,
+  "git.autoRepositoryDetection": false,
+  "eslint.enable": true,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 13,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "svelte.enable-ts-plugin": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.linkedEditing": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "css.enabledLanguages": ["html"]
+}
+```
+
+If this article helped you in some scenerio, you can consider subscribing the blog, thanks!
+
+And if you&#39;re in Vietnam, you can donate me:
+
+6411133053 - BIDV - TRAN NGO ANH QUAN
+
+> Thank you and goodbye 👋❤️
