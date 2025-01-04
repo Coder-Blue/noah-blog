@@ -4,6 +4,7 @@
     "defaultTitle": "Blog cá nhân của Quân",
     "description": "Một trang porfolio kiêm blog cá nhân được làm với NextJS bởi Anh Quân.",
     "ogImgUrl": "https://i.ibb.co/QYGVpKq/og-vi.png",
+    "ogBlogImgUrl": "https://i.ibb.co/N3Y9Mmm/og-blog-vn.jpg",
     "ogDescription": "Một nơi mà Quân có thể chia sẻ bản thân một cách tự do.",
     "ogLocale": "vi_VN",
     "localeFormat": "vn",

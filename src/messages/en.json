@@ -4,6 +4,7 @@
     "defaultTitle": "Noah's Personal Blog",
     "description": "A personal blog and portfolio built with NextJS by Noah Trần",
     "ogImgUrl": "https://i.ibb.co/SmHPc04/og-en.png",
+    "ogBlogImgUrl": "https://i.ibb.co/9rDZ9zC/og-blog-en.jpg",
     "ogDescription": "A place that Noah can freely share about his personal life.",
     "ogLocale": "en_CA",
     "localeFormat": "en",

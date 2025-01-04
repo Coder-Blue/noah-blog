@@ -12,8 +12,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl(t("localeFormat"))}`,
       lastModified: new Date().toISOString().split("T")[0],
       priority: 0.5,
-      changeFrequency: "monthly",
+      changeFrequency: "yearly",
       images: [t("ogImgUrl")],
+    },
+  ];
+
+  let blogPage = [
+    {
+      url: `${baseUrl(t("localeFormat"))}/blog`,
+      lastModified: new Date().toISOString().split("T")[0],
+      priority: 1,
+      changeFrequency: "monthly",
+      images: [t("ogBlogImgUrl")],
     },
   ];
 
@@ -27,5 +37,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
-  return [...mains, ...blogs, ...routes];
+  return [...mains, ...blogPage, ...blogs, ...routes];
 }
