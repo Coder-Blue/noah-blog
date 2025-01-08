@@ -64,7 +64,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="X"
               >
-                <Icons.twitter className="size-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300" />
+                <Icons.x className="size-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300" />
               </Link>
               <Link
                 href="https://github.com/Coder-Blue"

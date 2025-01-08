@@ -4,8 +4,9 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { SectionWrapper } from "@/hoc";
-import { github, instagram, x } from "@/public/index";
-import { FacebookIcon, HeartIcon } from "lucide-react";
+import { github, instagram } from "@/public/index";
+import { Icons } from "@/components/icons";
+import { HeartIcon } from "lucide-react";
 
 function Footer() {
   const t = useTranslations("LandingPage");
@@ -27,7 +28,7 @@ function Footer() {
           target="_blank"
           className="flex size-12 items-center justify-center rounded-full border border-black-200 bg-black-300"
         >
-          <FacebookIcon className="size-1/2 text-white" />
+          <Icons.facebook className="size-1/2 text-white" />
         </Link>
         <Link
           href="https://github.com/Coder-Blue"
@@ -48,7 +49,7 @@ function Footer() {
           target="_blank"
           className="flex size-12 items-center justify-center rounded-full border border-black-200 bg-black-300"
         >
-          <Image src={x} alt="X connect" className="size-1/2" />
+          <Icons.x className="size-1/2 text-white" />
         </Link>
         <Link
           href="https://locket.cam/sh1ro"

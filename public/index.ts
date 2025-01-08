@@ -31,7 +31,6 @@ import zircon from "./assets/projects/zircon-blue.jpg";
 import avatar from "./assets/user_placeholder.webp";
 
 import instagram from "./assets/platforms/instagram.svg";
-import x from "./assets/platforms/x.svg";
 
 export {
   logo,
@@ -47,7 +46,6 @@ export {
   git,
   github,
   instagram,
-  x,
   html,
   javascript,
   nextjs,
