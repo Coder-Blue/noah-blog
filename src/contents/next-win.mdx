@@ -1,0 +1,145 @@
+---
+title: "Tại sao NextJS chiến thắng trong lòng các lập trình viên frontend?"
+publishedAt: "2025-01-29"
+summary: "NextJS nói riêng, React nói chung đã chiếm được trái tim của các lập trình viên như thế nào?"
+category: "react"
+ogImage: "https://i.ibb.co/ccBzwgb2/NextJSOG.png"
+---
+
+Thế giới frontend/giao diện người dùng đã trải qua nhiều giai đoạn phát triển khá là kì lạ. Các lập trình viên đã thử nhiều cách để cải thiện trải nghiệm của cả bản thân và cho người dùng.
+
+Nó không đơn giản chỉ là đổi ngôn ngữ lập trình mà mình đã gắn bó để phát triển các kĩ năng, trải nghiệm. Mà bạn phải gắn bó với ngôn ngữ lập trình đó, hoàn thiện nó. Trong trường hợp này là JavaScript, một ngôn ngữ thuần dành riêng cho web có hành vi khá không logic thiết kế trong vòng 10 ngày được bùng nổ về số lượng các lập trình viên sử dụng sau khi Ryan Dahl ra mắt NodeJS vào năm 2009.
+
+Bạn không thể cứ nhét một thư mục với HTML, JavaScript, CSS bên trong và mong thế giới web chấp nhận bạn nhanh chóng. Thường thì cách build đơn sơ đó sẽ không phù hợp với việc bạn muốn phát hành cho nhiều người dùng, tối ưu hiệu năng cho người dùng và thiếu các tiện ích cho các lập trình viên.
+
+Cách mà số đông các lập trình viên, kỹ sư web lâu năm sẽ ưu chuộng và ưu tiên build/xây dựng web hơn lại là các khung và thư viện có sẵn vốn được thiết kế để tối ưu cho hiệu năng, SEO,... của ngôn ngữ lập trình đó.
+
+Như Ruby thì có Ruby on Rails, Python thì là Django, PHP thì có Laravel. Trong trường hợp này, với giới JavaScript mỗi ngày luôn phải cạnh tranh, mỗi ngày các khung các thư viện phải liên tục sửa đổi thì chọn ra cho mình một khung và thư viện để gắn bó lâu dài luôn là một lựa chọn khó.
+
+Giống như câu chuyện về đức tin, bạn chọn công nghệ là tùy theo trải nghiệm lâu dài và thị trường. React đã chứng minh được độ hữu dụng trong cộng đồng lập trình web, hiện tại có được chỗ đứng như một trong những thư viện nổi tiếng, không nói xa hơn nữa là được trân trọng nhất cộng đồng. Góp phần giúp cho các khung được xây dựng dựa trên nó cũng được yêu quý, nổi bật nhất là NextJS.
+
+<Image
+  src="https://i.ibb.co/ccBzwgb2/NextJSOG.png"
+  alt="NextJS"
+  width={1200}
+  height={630}
+/>
+
+## Tại sao lại là React?
+
+Vào thời điểm trước 2013, thế giới web đã rất khác so với hôm nay. Rất khác, khác lạ vô cùng. Các cuộc tranh luận về JavaScript luôn chỉ xoay quanh JQuery, Backbone và Angular. JQuery sinh thời đã cách mạng thế giới làm web, nó đơn giản và thể hiện đúng tinh thần của một trang web, đó chính là một cây tập hợp các node DOM.
+
+<Image
+  src="https://i.ibb.co/yFYmk6v4/domTree.png"
+  alt="DOMTree"
+  width={1200}
+  height={628}
+/>
+
+Bạn sẽ thiết kế các state/trạng thái trong các node DOM đó, khi cập nhật trạng thái, bạn buộc phải duyệt tìm cái DOM, tìm cái node bạn muốn cập nhật rồi mới cập nhật. Tính cách mạng của JQuery chính là ý tưởng trừu tượng đơn giản và thống nhất khi thao tác với DOM, và vẫn hỗ trợ trên số đông các trình duyệt.
+
+Nhưng trớ trên ở điểm, nó cũng là ưu vừa là nhược điểm lớn nhất của JQuery. Hóa ra việc tương tác trên một trạng thái có thể thay đổi được chia sẻ thường là một ý tưởng tồi. Việc này sẽ sinh ra các đột biến như một mớ bòng bong khó đoán, khó theo dõi nếu không cẩn thận trong ứng dụng của bạn. Thứ JQuery cần lúc đó là cấu trúc rõ ràng hơn.
+
+Thì chúng ta có thể nhìn sang lựa chọn khác đó chính là BackboneJS. Một trong nhiều thư viện JavaScript phổ biến đầu tiên áp dụng mô hình Model - View - Controller vào thiết kế của mình.
+
+<Image
+  src="https://i.ibb.co/6RMfPsXr/MVC.png"
+  alt="MVC"
+  width={1200}
+  height={630}
+/>
+
+Với chỉ 2000 dòng code của mình, thì Backbone cho phép bạn tách trạng thái ra khỏi DOM. Thay vì tồn tại trong các DOM thì trạng thái được lưu trữ trong các Model của nó. Khi nào Model thay đổi thì các View liên quan sẽ được render lại để hiển thị cho người dùng. Chỉ đơn giản thế thôi!
+
+Triết lý thiết kế của Backbone là càng đơn giản và càng đưa ra các ràng buộc càng tốt. Bạn có quyền đưa ra thiết kế kiểm soát View và Model của riêng bạn.
+
+Nhưng để nói về sự ràng buộc thì phải nhắc tới AngularJS. Với Angular thì nó sở hữu một tầm nhìn về một HTML đầy đủ tính năng, những gì bạn muốn thì Angular đều có sẵn, Data Binding (Liên kết dữ liệu 2 chiều), Data Filter (Bộ lọc dữ liệu), Routing (Định tuyến), Controller (Bộ điều khiển), Dependency injection (Nội xa phụ thuộc), Template (Khung mẫu),... Nó thật sự về nghĩa đen chính là phiên bản thu nhỏ của JQuery, là một khung khuôn khổ có ràng buộc tất cả trong một để xây dựng các trang web.
+
+Thời điểm lúc đó là 2011, môi trường vẫn rất khác xa, nơi mà các lập trình viên frontend thuần vẫn còn khá hiếm hơn nhiều so với ngày nay, tính ràng buộc cao của AngularJS rất có lợi cho các lập trình viên/nhà phát triển backend được giao nhiệm vụ bất đắc dĩ phải làm việc ở frontend. Điều này không lấy gì làm lạ như bạn mong đợi, góp phần thúc đẩy sự phổ biến của AngularJS.
+
+Một trong nhiều vần đề của AngularJS chính là sự ràng buộc về Data Binding. Liên kết dữ liệu 2 chiều rất đơn giản, đó chính là cập nhật cái View dựa trên sự thay đổi của Model, và cập nhật Model mỗi khi View thay đổi. Về mặt lý thuyết, nó ổn khi bạn không phải thao tác DOM một cách thủ công. Nhưng về mặt thực tiễn, các trạng thái cập nhật ngầm thường đem lại nhiều cái phiền khó theo dõi và khó để sửa lỗi hơn, cũng ảnh hưởng về mặt hiệu năng khi AngularJS phải liên tục quét phần mềm của bạn để tìm các trạng thái được cập nhật.
+
+Xây dựng web không bao giờ dừng lại ở 3 công nghệ kia mà luôn phải cạnh tranh với nhau, nhưng bất kể phần lớn các công nghệ sinh sau JQuery đều có điểm chung là các Model và cụ thể hơn thì là để Model đồng bộ với View của bạn.
+
+Thế nếu như chúng ta có thể hoàn toàn tránh vấn đề này thì sao?
+
+2013, các lập trình viên ở Facebook đã đưa ra giải pháp rằng chúng ta có thể làm sạch mọi thứ rồi render lại từ đầu cái View mỗi khi trạng thái được cập nhật, nhưng vẫn đảm bảo trải nghiệm tốt cho người dùng, tiền đề cho sự ra đời của React tại Facebook, một thư viện giao diện được dựa trên ý tưởng thiết kế đó.
+
+<Image
+  src="https://i.ibb.co/G3P6n4Y/react19.png"
+  alt="React"
+  width={1200}
+  height={630}
+/>
+
+Một trong những điểm cải tiến cốt lõi của React chính là coi View là một hàm/function cho trạng thái cập nhật của bạn. Những gì bạn cần làm và lo chỉ là sự phản ứng của cái trạng thái đó như thế nào và để React làm hết tất cả.
+
+Nhưng React chưa ăn điểm vào thời điểm đó vì quan điểm sử dụng JSX, đóng gói giao diện vào một API xây dựng dựa trên việc chia nhỏ thành phần/component, tức là hàm trong hàm có thể được kết hợp bằng trực giác cũng có thể được áp dụng tạo ra thành phần tổng quát hơn. React sẽ muốn bạn mô tả một thành phần trong như thế nào trong một thành phần bao trọn của chính nó. Cách diễn đạt này của React mang đến sự gợi nhớ về một phong cách thiết kế mang tên Separation of Concerns/Chia để trị trong khoa học máy tính, chia một chương trình máy tính lớn thành các phần nhỏ hơn để giải quyết vấn đề.
+
+Web vốn đã áp dụng chia để trị từ lâu với sự chia tách của HTML, CSS, JavaScript, nhưng React lại có một cách diễn giải khác hơn. Trong React, rằng bất cứ thứ gì liên quan đến phần nhìn cũng được xem là một vấn đề cần giải quyết, dù cho đó có là giao diện, logic, trạng thái và trong nhiều trường hợp có cả kiểu dáng. HTML để mô tả giao diện, JavaScript để biểu đạt, quản lý logic, React đã kết hợp 2 thứ lại để giải quyết vấn đề đó bằng JSX (JavaScript XML).
+
+Bạn đã thiết kế web đủ lâu thì có thể bắt kịp và hiểu JSX chỉ trong vài phút. Nó có thể kì lạ và khác biệt đến mức bạn có thể ghét nó. Nhưng trong thực tiễn, React JSX đã góp phần giải quyết được các vấn đề của bạn với cách diễn giải về nguyên tắc chia để trị này. Không những thế, bằng cách áp dụng JSX thì đột nhiên các đoạn code mang tính hoạt động bắt buộc của bạn có thể gói gọn trong một thành phần API được khai báo.
+
+Góp phần cải thiện trải nghiệm của các lập trình viên và tạo nên cả một hệ sinh thái sôi động của các thành phần bên thứ ba. Rồi bạn lại kết hợp chúng nó theo cách không ràng buộc để tạo nên phần mềm của mình.
+
+React dần trưởng thành theo các giai đoạn phát triển của JavaScript, cách sử dụng vẫn không đổi, đỉnh điểm là vào những năm từ 2014 đến 2020, giai đoạn các ứng dụng trang đơn/Single Page Application thịnh hành, React được sử dụng với React Router để xây dụng ứng dụng. Nhược điểm của React vào thời kì này cũng đã được thể hiện rõ, React luôn xuất ra các gói tài nguyên quá nặng cho trình duyệt bạn có thể xử lý, làm chậm đi khả năng giải quyết các tác vụ và mất đi trải nghiệm tốt của người dùng.
+
+Việc React mang đến một cách giải quyết mới cho vấn đề về các trạng thái của web là đúng, là cấp bách nhưng điều này sản sinh ra các gói tài nguyên lớn không cần thiết. Bạn chỉ nên xem React như một nền tảng để xây dựng giao diện hơn là nền tảng ứng dụng đầy đủ.
+
+Tiên phong khẳng định được ý tưởng này chính là NextJS, một khung được thiết kế dựa trên React, cho chúng ta những gì có lợi của React và ưu đãi thêm các tính năng cần thiết cho Web như SSG/Static Site Generation, SSR/Server Side Rendering, Bundling/Đóng gói thông minh các gói tài nguyên nhỏ gộn hơn, Route Prefetching/Tăng tốc điều hướng và nhiều hơn nữa. Ngoài NextJS chúng ta cũng tồn tại RemixJS.
+
+Thế giới web chưa bao giờ có dấu hiệu đi xuống, không thể phủ nhận React đã góp phần thay đổi toàn diện cả cuộc chơi của thế giới frontend.
+
+## Tại sao lại là NextJS?
+
+React rất tốt nhưng nó lại có vấn đề ở mặt thiết kế, nó không rành mạch rõ ràng về các vấn đề khác ngoài quản lý trạng thái và diễn đạt giao diện. Mà thế giới web cần nhiều hơn là một cái giao diện đơn thuần. React gây khó cho các lập trình viên ở mặt bạn phải hiểu rõ cách nó hoạt động và nên được thiết kế như nào để có thể sử dụng và làm ứng dụng, nhưng không phải ai cũng có hiểu biết ngang tầm một tiến sĩ khoa học máy tính.
+
+Vấn đề tiếp theo của React lại là bạn phải tùy chỉnh khá nhiều cái đặt vì React thật sự không ràng buộc về các ý tưởng trước khi thật sự xây dựng ứng dụng. Lúc ấy bạn nên đọc hướng dẫn sử dụng Webpack để tra tấn bản thân...
+
+Đôi lúc tính đơn giản của React bị lu mờ bởi phần tùy chỉnh, thiết lập tốn thời gian này của bản thân nó, tưởng tượng bạn chỉ muốn làm ra một phần mềm web cơ bản xuất ra màn hình của người dùng chữ "Hello World" mà lại phải chịu tốn thời gian như thế?
+
+Tính không rõ ràng của React là đúng, là tuyệt khi nó cho phép chúng ta tự chọn hướng phát triển cho phần mềm của mình, nhưng chúng ta sẽ cực kì bị phiền bởi các khái niệm như Babel, SWC, Webpack, Gulp rồi phải cấu hình chúng cho phần mềm về lâu về dài của mình.
+
+Sau nhiều năm thì Facebook đã ra mắt `create-react-app` như một giải pháp cho vấn đề trên, thiết lập một nơi làm việc React nhanh chóng nhất có thể. Với chỉ một lệnh, chúng ta đã có một ứng dụng React sẵn sàng cho môi trường web.
+
+```bash
+npx create-react-app my-app
+```
+
+Không phải mày mò với Webpack, Babel, Gulp,... mà chỉ tập trung vào việc làm ứng dụng thay vì cấu hình nó. Nhưng đó là câu chuyện của nhiều năm về trước, nó đã không còn phù hợp với tình hình thế giới web hiện tại.
+
+Vấn đề về tạo ứng dụng mẫu để các nhà phát triển có thể chỉnh sửa tùy theo ý muốn của `create-react-app` tạo ra là khá tương đồng với AngularJS, là chúng chỉ hợp với tạo ứng dụng trang đơn. Với ứng dụng trang đơn, thay vì gửi yêu cầu đến máy chủ mỗi khi người dùng truy cập một trang mới, ứng dụng của bạn sẽ tải tất cả HTML, JavaScript, CSS cần thiết theo yêu cầu ban đầu của người dùng. Có nghĩa là các tuyến đường chuyển đổi sẽ được thực hiện luôn trên máy khách, cho phần mềm cảm giác mượt mà hơn nếu ứng dụng được viết tốt, cho người dùng trải nghiệm tốt và ứng dụng web sẽ cảm giác như một app trên thiết bị đó hơn, nhưng nếu viết ít hơn chữ tốt thì ứng dụng trang đơn sẽ để lại nhiều mặt hại không mong muốn.
+
+Tạo ra các gói tài nguyên quá lớn mà bạn không muốn, gây vấn đề cho các người dùng có đường truyền kết nối Internet yếu hoặc sử dụng trên thiết bị di động. Với các ứng dụng trang đơn, dữ liệu có thể được tải lại tùy theo nhu cầu của người dùng, lần nữa nếu không cẩn thận thì mỗi khi người dùng chuyển đổi trang đều phải ngồi chờ. Và nếu bạn quan tâm về SEO/Search Engine Optimization, thì ứng dụng trang đơn ở xa với chữ lý tưởng, bạn đang phụ thuộc vào khả năng thực thi JavaScript của Google trước khi nó có thể tìm ra nội dung trang của bạn.
+
+Ứng dụng trang đơn không phải không tốt, vấn đề để đạt được thành công của chúng chỉ là quá nhiều để giải quyết, việc tạo ra chúng mà muốn tốt thì đòi hỏi về kinh nghiệm, suy nghĩ và tập trung kế cả vào chi tiết nhỏ nhất.
+
+Chúng nên tồn tại chỉ là không nên là cách mặc định chúng ta nên tạo ứng dụng.
+
+Vậy giải pháp sẽ là NextJS, một khung toàn diện có thể kết xuất trên máy chủ được xây dựng dựa trên React mã nguổn mở, được ra mắt lần đầu vào năm 2016 bởi công ty ZEIT mà bây giờ đã đổi tên là Vercel.
+
+Trọng tâm của NextJS ở chỗ nó là kết tinh đỉnh cao của mọi thứ của thế giới web trong vòng 20 năm trước đó, sự đơn giản của thời kì document, sức mạnh của thời kì SSR, thành phần của thời kì React và trải nghiệm lập trình tốt của thời kỳ ứng dụng trang đơn. Trong khi giảm thiểu được nhiều vấn đề, đánh đổi mà các thời kì đề ra.
+
+Nhắc lại tại sao nó lại có thể làm tốt được việc này? Nó được xây dựng dựa trên thư viện giao diện React, chúng ta có thể chấp nhận NextJS như chính React và cũng đồng thời không phải là React vì nó có thể thỏa mãn nhiều nhu cầu hơn mà React không đáp ứng được. Như `create-react-app` thì bạn cũng có thể chỉ cần một dòng lệnh để có được một ứng dụng mẫu có thể chỉnh sửa ngay lập tức.
+
+```bash
+npx create-next-app@latest my-app
+```
+
+Và để tạo ra một trang trong NextJS, bạn chỉ đơn giản là thêm một tệp `.js` `.jsx` hoặc `.tsx` vào thư mục mang tên trang trong thư mục `app` nếu bạn sử dụng App Router của NextJS hiện tại, `pages` nếu bạn sử dụng NextJS bản cũ, rồi mô tả giao diện cho trang đó. Mặc định thì NextJS sẽ tạo ra trang tĩnh trong thời gian xây dựng web và như các trang web cũ thì nó sẽ mang HTML cho người dùng theo yêu cầu cho phép nó lưu vào bộ nhớ đệm bằng CDN. Nhưng cũng không giống các trang web cũ ở việc nếu trang đó cần dữ liệu từ bên ngoài mà có thể được lấy tại thời điểm xây dựng, bạn chỉ cần xuất một hàm `fetch` để lấy và trả về dữ liệu mà sẽ được truyền dưới dạng dữ liệu cho thành phần. Bằng nhiều cách mà bạn muốn, NextJS sẽ trao cho bạn sự linh hoạt mà bạn muốn đưa dữ liệu bằng phần mềm của mình.
+
+Trong thời gian xây dựng, trong khi người dùng sử dụng phần mềm hoặc trên máy chủ. Và vì NextJS là một khung toàn diện, thì không chỉ bao gồm mỗi việc lấy và trả dữ liệu vào ứng dụng của bạn, nó còn đóng gói hàng loạt các tính năng khác như chia nhỏ code tự động, nghĩa là mỗi trang là một gói riêng để trình duyệt người dùng tải về những thứ mà họ cần. Ngoài ra còn có sự bổ sung về thành phần HTML theo khuynh hướng hiện đại hơn như `<Image />` thay thế cho `<img />`, kết xuất ảnh tốt hơn, ổn định về mặt hình ảnh, tốc độ tải trang nhanh hơn, linh hoạt thay đổi kích thước tài nguyên ảnh.
+
+Và không chỉ dừng lại ở đó, NextJS còn cho phép bạn tạo ra API mà không cần một máy chủ riêng, đúng nghĩa tạo ra một server chỉ bằng một tệp duy nhất.
+
+## Kết luận
+
+NextJS không phải là khung toàn diện duy nhất được xây trên nền của React, nhưng nó là khung JavaScript đầu tiên đã kết hợp tất cả những đổi mới của nhiều thập kỉ phát triển web trôi qua thành một gói duy nhất, đó là lý do vì sao đến ngày nay NextJS vẫn trụ vững dưới vai trò là một trong những cách tốt nhất để tạo ứng dụng web toàn diện của riêng bạn. Xứng đáng là kẻ được tôn trọng như React trong nhiều năm qua.
+
+> ### Note
+>
+> Ý tưởng bài viết dựa trên các video của [uidotdev](https://www.youtube.com/@uidotdev)
+>
+> Bài viết nếu mang tính thiên vị React và hệ sinh thái của nó thì mong xin bỏ qua, vì React đã gắn bó từ những ngày đầu tác giả tham gia thế giới web.
+>
+> Trang web này, blog này cũng được viết trên NextJS.

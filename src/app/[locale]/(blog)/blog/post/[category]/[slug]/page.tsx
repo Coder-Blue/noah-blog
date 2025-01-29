@@ -13,7 +13,7 @@ import {
   Header,
   ReportViews,
 } from "@/components/blog";
-import { baseUrl, fetcherUrl } from "@/lib/utils";
+import { baseUrl } from "@/lib/utils";
 
 type SlugPostPageProps = {
   params: Promise<{ locale: Locale; slug: string; category: string }>;
@@ -41,7 +41,10 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
     title,
     publishedAt: publishedTime,
     summary: description,
+    ogImage
   } = post.metadata;
+
+  let imageUrl = ogImage ? ogImage : t("Metadata.ogImgUrl");
 
   return {
     title,
@@ -57,7 +60,7 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
       url: `${baseUrl(t("localeFormat"))}/blog/post/${post?.metadata.category}/${post?.slug}`,
       images: [
         {
-          url: t("Metadata.ogImgUrl"),
+          url: imageUrl,
         },
       ],
     },
@@ -67,7 +70,7 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
       description,
       images: [
         {
-          url: t("Metadata.ogImgUrl"),
+          url: imageUrl,
         },
       ],
     },
