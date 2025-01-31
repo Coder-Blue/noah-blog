@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
     title,
     publishedAt: publishedTime,
     summary: description,
-    ogImage
+    ogImage,
   } = post.metadata;
 
   let imageUrl = ogImage ? ogImage : t("Metadata.ogImgUrl");
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: SlugPostPageProps) {
       publishedTime,
       locale: t("Metadata.ogLocale"),
       alternateLocale: ["en_CA", "vi_VN"],
-      siteName: title,
+      siteName: t("Metadata.defaultTitle"),
       url: `${baseUrl(t("localeFormat"))}/blog/post/${post?.metadata.category}/${post?.slug}`,
       images: [
         {
