@@ -49,6 +49,13 @@ function Feedbacks() {
       usingProduct: "Zircon Blue",
       image: avatar,
     },
+    {
+      testimonial: t("testimonials.testimonial4"),
+      name: t("testimonials.name"),
+      designation: t("testimonials.designation"),
+      usingProduct: "Carbon Daily",
+      image: avatar,
+    },
   ];
 
   return (

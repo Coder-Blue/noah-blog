@@ -65,6 +65,9 @@
       },
       "project3": {
         "description": "Một nền tảng lưu trữ đám mây dựa trên web cho phép người dùng giữ an toàn cho dữ liệu, tệp của mình. Điều đó khả thi, tất cả là nhờ vào công nghệ cơ sở dữ liệu tiên tiến và cực kỳ nhanh."
+      },
+      "project4": {
+        "description": "Một trang web diễn đàn thực sự mang đến cho người dùng sự tự do để thảo luận bất cứ điều gì họ muốn. Được xây dựng bằng công nghệ thử nghiệm nhưng tốc độ cực nhanh."
       }
     },
     "testimonials": {
@@ -75,7 +78,8 @@
       "name": "Ẩn danh",
       "testimonial1": "Natri SOC mang lại một trải nghiệm khác hoàn toàn so với Facebook và X. Cảm giác được sử dụng mượt hơn mà không phải đánh đổi quá nhiều thứ.",
       "testimonial2": "Argon Note tuy thoạt nhìn là một ứng dụng ghi note đơn giản, nhưng nhờ tính năng AI của nó, tôi đã có thể xử lý được nhiều tác vụ công việc một cách hiệu quả hơn.",
-      "testimonial3": "Một ứng dụng lưu trữ đám mây của thời đại, nhanh đến mức tôi đã từng không nghĩ là nó sẽ khả thi, và tôi phải cảm ơn rất nhiều vì đã giúp tôi khá nhiều trong công việc."
+      "testimonial3": "Một ứng dụng lưu trữ đám mây của thời đại, nhanh đến mức tôi đã từng không nghĩ là nó sẽ khả thi, và tôi phải cảm ơn rất nhiều vì đã giúp tôi khá nhiều trong công việc.",
+      "testimonial4": "Tôi đã có một khoảng thời gian khá vui khi trò chuyện trực tuyến với người lạ trên diễn đàn này. Phần tuyệt nhất là thảo luận về mọi thứ trên thế giới này một cách ẩn danh."
     },
     "contact": {
       "title": "Liên lạc với tôi",

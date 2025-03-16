@@ -65,6 +65,9 @@
       },
       "project3": {
         "description": "A web-based cloud storage platform that allows users to keep their data, files safe. It's possible, all thanks to the incredibly fast, and bleeding-edge database technology."
+      },
+      "project4": {
+        "description": "A forum website that truly give user freedom to discuss whatever they want. Built with experimental but blazingly fast technology."
       }
     },
     "testimonials": {
@@ -75,7 +78,8 @@
       "name": "Anonymous",
       "testimonial1": "Natri SOC brings a completely different experience than Facebook and X. It feels smoother to use without having to compromise too much.",
       "testimonial2": "Argon Note may seem like a simple note-taking app at first glance, but thanks to its AI features, I can handle many work tasks more effectively.",
-      "testimonial3": "A cloud storage application of the time, so fast that I didn't think it would be possible, and I have to thank a lot for helping me quite a lot in my work."
+      "testimonial3": "A cloud storage application of the time, so fast that I didn't think it would be possible, and I have to thank a lot for helping me quite a lot in my work.",
+      "testimonial4": "I have so much fun when chatting to strangers online on this forum. The best part is discussing something about everything on this world anonymously."
     },
     "contact": {
       "title": "Get in touch",

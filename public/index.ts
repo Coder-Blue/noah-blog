@@ -25,6 +25,7 @@ import typescript from "./assets/tech/typescript.png";
 import vitejs from "./assets/tech/vitejs.png";
 
 import argon from "./assets/projects/argon-note.jpg";
+import carbon from "./assets/projects/carbon-daily.png";
 import natri from "./assets/projects/natri-soc.jpg";
 import zircon from "./assets/projects/zircon-blue.jpg";
 
@@ -57,6 +58,7 @@ export {
   typescript,
   vitejs,
   argon,
+  carbon,
   natri,
   zircon,
   avatar,

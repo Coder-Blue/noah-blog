@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { styles } from "./styles";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { cn } from "@/lib/utils";
-import { argon, github, natri, zircon } from "@/public/index";
+import { argon, carbon, github, natri, zircon } from "@/public/index";
 
 type TagType = {
   name: string;
@@ -96,6 +96,26 @@ function Works() {
       ],
       image: zircon,
       link: "https://github.com/Coder-Blue/zircon-blue",
+    },
+    {
+      name: "Carbon Daily",
+      description: t("works.project4.description"),
+      tags: [
+        {
+          name: "tanstack-start",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "hono",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: carbon,
+      link: "https://github.com/Coder-Blue/carbon-news",
     },
   ];
 
