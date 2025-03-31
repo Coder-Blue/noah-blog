@@ -27,7 +27,7 @@ export async function GET() {
     .join("/n");
 
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
-        <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+        <rss version="2.0">
             <channel>
                 <title>${t("defaultTitle")}</title>
                 <link>${baseUrl(t("localeFormat"))}/blog</link>
