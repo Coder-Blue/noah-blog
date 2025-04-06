@@ -68,6 +68,9 @@
       },
       "project4": {
         "description": "Một trang web diễn đàn thực sự mang đến cho người dùng sự tự do để thảo luận bất cứ điều gì họ muốn. Được xây dựng bằng công nghệ thử nghiệm nhưng tốc độ cực nhanh."
+      },
+      "project5": {
+        "description": "Một ứng dụng dự báo thời tiết được xây dựng với công nghệ mạnh mẽ nhất năm 2025, TanStack Router and Query, Vite Rolldown, Vite Plugin PWA. Người dùng có thể trải nghiệm những gì tốt nhất với các công nghệ tiên tiến của phát triển ứng dụng web."
       }
     },
     "testimonials": {
@@ -79,7 +82,8 @@
       "testimonial1": "Natri SOC mang lại một trải nghiệm khác hoàn toàn so với Facebook và X. Cảm giác được sử dụng mượt hơn mà không phải đánh đổi quá nhiều thứ.",
       "testimonial2": "Argon Note tuy thoạt nhìn là một ứng dụng ghi note đơn giản, nhưng nhờ tính năng AI của nó, tôi đã có thể xử lý được nhiều tác vụ công việc một cách hiệu quả hơn.",
       "testimonial3": "Một ứng dụng lưu trữ đám mây của thời đại, nhanh đến mức tôi đã từng không nghĩ là nó sẽ khả thi, và tôi phải cảm ơn rất nhiều vì đã giúp tôi khá nhiều trong công việc.",
-      "testimonial4": "Tôi đã có một khoảng thời gian khá vui khi trò chuyện trực tuyến với người lạ trên diễn đàn này. Phần tuyệt nhất là thảo luận về mọi thứ trên thế giới này một cách ẩn danh."
+      "testimonial4": "Tôi đã có một khoảng thời gian khá vui khi trò chuyện trực tuyến với người lạ trên diễn đàn này. Phần tuyệt nhất là thảo luận về mọi thứ trên thế giới này một cách ẩn danh.",
+      "testimonial5": "Lần đầu tiên được sử dụng một ứng dụng thời tiết có thiết kế rất sạch, rất mạnh mẽ. Công nghệ đằng sau nó thật tuyệt vời. Tôi thậm chí có thể cài đặt nó trên PC hoặc Điện thoại của mình thông qua PWA."
     },
     "contact": {
       "title": "Liên lạc với tôi",

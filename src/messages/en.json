@@ -68,6 +68,9 @@
       },
       "project4": {
         "description": "A forum website that truly give user freedom to discuss whatever they want. Built with experimental but blazingly fast technology."
+      },
+      "project5": {
+        "description": "A weather forcasting app that built with the most powerful tech of 2025, TanStack Router and Query, Vite Rolldown, Vite Plugin PWA. Users can experience the best with the advanced technologies of web app development."
       }
     },
     "testimonials": {
@@ -79,7 +82,8 @@
       "testimonial1": "Natri SOC brings a completely different experience than Facebook and X. It feels smoother to use without having to compromise too much.",
       "testimonial2": "Argon Note may seem like a simple note-taking app at first glance, but thanks to its AI features, I can handle many work tasks more effectively.",
       "testimonial3": "A cloud storage application of the time, so fast that I didn't think it would be possible, and I have to thank a lot for helping me quite a lot in my work.",
-      "testimonial4": "I have so much fun when chatting to strangers online on this forum. The best part is discussing something about everything on this world anonymously."
+      "testimonial4": "I have so much fun when chatting to strangers online on this forum. The best part is discussing something about everything on this world anonymously.",
+      "testimonial5": "For the first time, I can use a weather app that has the design is so clean, so powerful. The tech stack behind it was so amazing. I can even install it on my PC or Phone via PWA."
     },
     "contact": {
       "title": "Get in touch",

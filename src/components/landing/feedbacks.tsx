@@ -56,6 +56,13 @@ function Feedbacks() {
       usingProduct: "Carbon Daily",
       image: avatar,
     },
+    {
+      testimonial: t("testimonials.testimonial5"),
+      name: t("testimonials.name"),
+      designation: t("testimonials.designation"),
+      usingProduct: "Lithium Weather",
+      image: avatar,
+    },
   ];
 
   return (

@@ -28,6 +28,7 @@ import argon from "./assets/projects/argon-note.jpg";
 import carbon from "./assets/projects/carbon-daily.png";
 import natri from "./assets/projects/natri-soc.jpg";
 import zircon from "./assets/projects/zircon-blue.jpg";
+import lithium from "./assets/projects/lithium-pwa.png";
 
 import avatar from "./assets/user_placeholder.webp";
 
@@ -61,5 +62,6 @@ export {
   carbon,
   natri,
   zircon,
+  lithium,
   avatar,
 };

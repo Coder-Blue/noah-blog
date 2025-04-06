@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { styles } from "./styles";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { cn } from "@/lib/utils";
-import { argon, carbon, github, natri, zircon } from "@/public/index";
+import { argon, carbon, github, lithium, natri, zircon } from "@/public/index";
 
 type TagType = {
   name: string;
@@ -116,6 +116,26 @@ function Works() {
       ],
       image: carbon,
       link: "https://github.com/Coder-Blue/carbon-news",
+    },
+    {
+      name: "Lithium Weather",
+      description: t("works.project5.description"),
+      tags: [
+        {
+          name: "vite",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tanstack-router",
+          color: "green-text-gradient",
+        },
+      ],
+      image: lithium,
+      link: "https://github.com/Coder-Blue/lithium-pwa",
     },
   ];
 
