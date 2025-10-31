@@ -45,7 +45,7 @@ function Footer() {
           <Image src={instagram} alt="IG connect" className="size-1/2" />
         </Link>
         <Link
-          href="https://x.com/not_sh1ro"
+          href="https://x.com/sh1ro_code"
           target="_blank"
           className="flex size-12 items-center justify-center rounded-full border border-black-200 bg-black-300"
         >

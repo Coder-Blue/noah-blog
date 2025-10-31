@@ -59,7 +59,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://x.com/not_sh1ro"
+                href="https://x.com/sh1ro_code"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X"
